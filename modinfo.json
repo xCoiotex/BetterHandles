@@ -1,0 +1,19 @@
+{
+  "type":"content",
+  "modid":"betterhandles",
+  "name":"Better Handles",
+  "description":"Overhaul and add new variets of tools with more types of handles, and some changes to the crafting grid, balanced tools",
+  "version":"1.0.1",
+  "networkversion":null,
+  "website":"",
+  "authors":[
+    "xCoiotex"
+ ],
+  "side":"Universal",
+  "RequiredOnClient":true,
+  "RequiredOnServer":true,
+  "dependencies":{
+      
+  }
+}
+  

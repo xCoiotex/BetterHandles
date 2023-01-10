@@ -1,0 +1,45 @@
+[
+	{
+		"ingredientPattern": "T,C,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:axehead-*", "name": "material", "allowedVariants": ["chert","peridotite","granite","andesite", "basalt", "flint", "obsidian"]},
+			"C": { "type": "item", "code": "game:cattailtops"},
+			"S": { "type": "item", "code": "game:stick" }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "game:axe-{material}", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,C,B",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:axehead-*", "name": "material", "allowedVariants": ["chert","peridotite","granite","andesite", "basalt", "flint", "obsidian"]},
+			"C": { "type": "item", "code": "game:cattailtops"},
+			"B": { "type": "item", "code": "game:bone" }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "game:axe-bone-{material}", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:axehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "handle-*",  "name": "handle", "allowedVariants": ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart", "aged" ] }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "game:axe-{material}-{handle}", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:axehead-*", "name": "material", "allowedVariants": ["gold","silver","iron","meteoriciron","steel"] },
+			"S": { "type": "item", "code": "game:stick" }
+		},
+		"width": 1,
+		"height": 2,
+		"output": { "type": "item", "code": "game:axe-{material}", "quantity": 1  }
+	}
+]

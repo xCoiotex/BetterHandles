@@ -1,0 +1,956 @@
+{
+	code: "axe",
+	class: "itemAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-*"]
+		},
+		toolrackTransformByType: {
+			"*":
+			{
+				rotation: { y: 1, z: -1 },
+				translation: { x: -0.3, y: 0.6 },
+				scale: 1.25,
+			}
+		},
+		groundStorageTransform: {
+			translation: { x: 0, y: 0.06, z: -0.035 },
+			rotation: { x: 26, y: 88, z: -87 },
+			scale: 0.88
+		}
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 1,
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+		}
+	}],
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", 
+																 "gold", "silver", "iron", "meteoriciron", "steel"
+		  	] },
+		{ code: "handle", states: ["birch", "oak", "maple", "pine","acacia","kapok","baldcypress","larch",
+									"redwood", "ebony", "walnut", "purpleheart", "aged"
+			] }
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shapeByType: {
+		"*-copper-*": { "base": "game:item/tool/axe-copper" },
+		"*-tinbronze-*": { "base": "game:item/tool/axe-copper" },
+		"*-bismuthbronze-*": { "base": "game:item/tool/axe-copper" },
+		"*-blackbronze-*": { "base": "game:item/tool/axe-copper" },
+		"*-gold-*": { "base": "game:item/tool/axe-iron" },
+		"*-silver-*": { "base": "game:item/tool/axe-iron" },
+		"*-iron-*": { "base": "game:item/tool/axe-iron" },
+		"*-meteoriciron-*": { "base": "game:item/tool/axe-iron" },
+		"*-steel-*": { "base": "game:item/tool/axe-iron" }
+	},
+	heldTpHitAnimation: "axechop",
+	texturesByType: {
+		"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)-(acacia|aged|baldcypress|birch|bone|ebony|kapok|larch|maple|oak|pine|purpleheart|redwood|walnut)":{
+			"material": { "base": "game:block/metal/ingot/{material}" },
+			"handle": {"base": "betterhandles:block/{handle}"}
+		}
+	},
+	attackRange: 2,
+	tooltierbytype: {
+		"*-copper-*": 2,
+		"*-gold-*": 2,
+		"*-silver-*": 2,
+		"*-bismuthbronze-*": 3,
+		"*-tinbronze-*": 3,
+		"*-blackbronze-*": 3,
+		"*-iron-*": 4,
+		"*-meteoriciron-*": 4,
+		"*-steel-*": 5
+	},
+	miningspeedbytype: {
+		"axe-copper-aged": {
+			"wood": 6.24,
+			"plant": 3.36,
+			"leaves": 2.88
+		},
+		"axe-copper-kapok": {
+			"wood": 5.98,
+			"plant": 3.22,
+			"leaves": 2.76
+		},
+		"axe-copper-larch": {
+			"wood": 5.72,
+			"plant": 3.08,
+			"leaves": 2.64
+		},
+		"axe-copper-redwood": {
+			"wood": 5.46,
+			"plant": 2.94,
+			"leaves": 2.52
+		},
+		"axe-copper-baldcypress": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-copper-oak": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-copper-pine": {
+			"wood": 4.94,
+			"plant": 2.66,
+			"leaves": 2.28
+		},
+		"axe-copper-birch": {
+			"wood": 4.68,
+			"plant": 2.52,
+			"leaves": 2.16
+		},
+		"axe-copper-walnut": {
+			"wood": 4.42,
+			"plant": 2.38,
+			"leaves": 2.04
+		},
+		"axe-copper-acacia": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-copper-maple": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-copper-purpleheart": {
+			"wood": 3.9,
+			"plant": 2.1,
+			"leaves": 1.8
+		},
+		"axe-copper-ebony": {
+			"wood": 3.38,
+			"plant": 1.82,
+			"leaves": 1.56
+		},
+
+		"axe-silver-aged": {
+			"wood": 6.24,
+			"plant": 3.36,
+			"leaves": 2.88
+		},
+		"axe-silver-kapok": {
+			"wood": 5.98,
+			"plant": 3.22,
+			"leaves": 2.76
+		},
+		"axe-silver-larch": {
+			"wood": 5.72,
+			"plant": 3.08,
+			"leaves": 2.64
+		},
+		"axe-silver-redwood": {
+			"wood": 5.46,
+			"plant": 2.94,
+			"leaves": 2.52
+		},
+		"axe-silver-baldcypress": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-silver-oak": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-silver-pine": {
+			"wood": 4.94,
+			"plant": 2.66,
+			"leaves": 2.28
+		},
+		"axe-silver-birch": {
+			"wood": 4.68,
+			"plant": 2.52,
+			"leaves": 2.16
+		},
+		"axe-silver-walnut": {
+			"wood": 4.42,
+			"plant": 2.38,
+			"leaves": 2.04
+		},
+		"axe-silver-acacia": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-silver-maple": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-silver-purpleheart": {
+			"wood": 3.9,
+			"plant": 2.1,
+			"leaves": 1.8
+		},
+		"axe-silver-ebony": {
+			"wood": 3.38,
+			"plant": 1.82,
+			"leaves": 1.56
+		},
+
+		"axe-gold-aged": {
+			"wood": 6.24,
+			"plant": 3.36,
+			"leaves": 2.88
+		},
+		"axe-gold-kapok": {
+			"wood": 5.98,
+			"plant": 3.22,
+			"leaves": 2.76
+		},
+		"axe-gold-larch": {
+			"wood": 5.72,
+			"plant": 3.08,
+			"leaves": 2.64
+		},
+		"axe-gold-redwood": {
+			"wood": 5.46,
+			"plant": 2.94,
+			"leaves": 2.52
+		},
+		"axe-gold-baldcypress": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-gold-oak": {
+			"wood": 5.2,
+			"plant": 2.8,
+			"leaves": 2.4
+		},
+		"axe-gold-pine": {
+			"wood": 4.94,
+			"plant": 2.66,
+			"leaves": 2.28
+		},
+		"axe-gold-birch": {
+			"wood": 4.68,
+			"plant": 2.52,
+			"leaves": 2.16
+		},
+		"axe-gold-walnut": {
+			"wood": 4.42,
+			"plant": 2.38,
+			"leaves": 2.04
+		},
+		"axe-gold-acacia": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-gold-maple": {
+			"wood": 4.16,
+			"plant": 2.24,
+			"leaves": 1.92
+		},
+		"axe-gold-purpleheart": {
+			"wood": 3.9,
+			"plant": 2.1,
+			"leaves": 1.8
+		},
+		"axe-gold-ebony": {
+			"wood": 3.38,
+			"plant": 1.82,
+			"leaves": 1.56
+		},
+
+		"axe-bismuthbronze-aged": {
+			"wood": 6.67,
+			"plant": 4.025,
+			"leaves": 2.99
+		},
+		"axe-bismuthbronze-kapok": {
+			"wood": 6.38,
+			"plant": 3.85,
+			"leaves": 2.86
+		},
+		"axe-bismuthbronze-larch": {
+			"wood": 6.09,
+			"plant": 3.675,
+			"leaves": 2.73
+		},
+		"axe-bismuthbronze-redwood": {
+			"wood": 5.8,
+			"plant": 3.5,
+			"leaves": 2.6
+		},
+		"axe-bismuthbronze-baldcypress": {
+			"wood": 5.51,
+			"plant": 3.325,
+			"leaves": 2.47
+		},
+		"axe-bismuthbronze-oak": {
+			"wood": 5.51,
+			"plant": 3.325,
+			"leaves": 2.47
+		},
+		"axe-bismuthbronze-pine": {
+			"wood": 5.22,
+			"plant": 3.15,
+			"leaves": 2.34
+		},
+		"axe-bismuthbronze-birch": {
+			"wood": 4.93,
+			"plant": 2.975,
+			"leaves": 2.21
+		},
+		"axe-bismuthbronze-walnut": {
+			"wood": 4.64,
+			"plant": 2.8,
+			"leaves": 2.08
+		},
+		"axe-bismuthbronze-acacia": {
+			"wood": 4.35,
+			"plant": 2.625,
+			"leaves": 1.95
+		},
+		"axe-bismuthbronze-maple": {
+			"wood": 4.35,
+			"plant": 2.625,
+			"leaves": 1.95
+		},
+		"axe-bismuthbronze-purpleheart": {
+			"wood": 4.06,
+			"plant": 2.45,
+			"leaves": 1.82
+		},
+		"axe-bismuthbronze-ebony": {
+			"wood": 3.48,
+			"plant": 2.1,
+			"leaves": 1.56
+		},
+
+		"axe-tinbronze-aged": {
+			"wood": 7.245,
+			"plant": 4.37,
+			"leaves": 3.45
+		},
+		"axe-tinbronze-kapok": {
+			"wood": 6.98,
+			"plant": 4.18,
+			"leaves": 3.3
+		},
+		"axe-tinbronze-larch": {
+			"wood": 6.615,
+			"plant": 3.99,
+			"leaves": 3.15
+		},
+		"axe-tinbronze-redwood": {
+			"wood": 6.3,
+			"plant": 3.8,
+			"leaves": 3
+		},
+		"axe-tinbronze-baldcypress": {
+			"wood": 5.985,
+			"plant": 3.61,
+			"leaves": 2.85
+		},
+		"axe-tinbronze-oak": {
+			"wood": 5.985,
+			"plant": 3.61,
+			"leaves": 2.85
+		},
+		"axe-tinbronze-pine": {
+			"wood": 5.67,
+			"plant": 3.42,
+			"leaves": 2.7
+		},
+		"axe-tinbronze-birch": {
+			"wood": 5.355,
+			"plant": 3.23,
+			"leaves": 2.55
+		},
+		"axe-tinbronze-walnut": {
+			"wood": 5.04,
+			"plant": 3.04,
+			"leaves": 2.4
+		},
+		"axe-tinbronze-acacia": {
+			"wood": 4.725,
+			"plant": 2.85,
+			"leaves": 2.25
+		},
+		"axe-tinbronze-maple": {
+			"wood": 4.725,
+			"plant": 2.85,
+			"leaves": 2.25
+		},
+		"axe-tinbronze-purpleheart": {
+			"wood": 4.41,
+			"plant": 2.66,
+			"leaves": 2.1
+		},
+		"axe-tinbronze-ebony": {
+			"wood": 3.78,
+			"plant": 2.28,
+			"leaves": 1.8
+		},	
+
+		"axe-blackbronze-aged": {
+			"wood": 7.59,
+			"plant": 4.6,
+			"leaves": 3.565
+		},
+		"axe-blackbronze-kapok": {
+			"wood": 7.26,
+			"plant": 4.4,
+			"leaves": 3.41
+		},
+		"axe-blackbronze-larch": {
+			"wood": 6.93,
+			"plant": 4.2,
+			"leaves": 3.255
+		},
+		"axe-blackbronze-redwood": {
+			"wood": 6.6,
+			"plant": 4,
+			"leaves": 3.1
+		},
+		"axe-blackbronze-baldcypress": {
+			"wood": 6.27,
+			"plant": 3.8,
+			"leaves": 2.945
+		},
+		"axe-blackbronze-oak": {
+			"wood": 6.27,
+			"plant": 3.8,
+			"leaves": 2.945
+		},
+		"axe-blackbronze-pine": {
+			"wood": 5.94,
+			"plant": 3.6,
+			"leaves": 2.79
+		},
+		"axe-blackbronze-birch": {
+			"wood": 5.61,
+			"plant": 3.4,
+			"leaves": 2.635
+		},
+		"axe-blackbronze-walnut": {
+			"wood": 5.28,
+			"plant": 3.2,
+			"leaves": 2.48
+		},
+		"axe-blackbronze-acacia": {
+			"wood": 4.95,
+			"plant": 3,
+			"leaves": 2.325
+		},
+		"axe-blackbronze-maple": {
+			"wood": 4.95,
+			"plant": 3,
+			"leaves": 2.325
+		},
+		"axe-blackbronze-purpleheart": {
+			"wood": 4.62,
+			"plant": 2.8,
+			"leaves": 2.17
+		},
+		"axe-blackbronze-ebony": {
+			"wood": 3.96,
+			"plant": 2.4,
+			"leaves": 1.86
+		},
+
+		"axe-iron-aged": {
+			"wood": 9.24,
+			"plant": 5.5,
+			"leaves": 3.52
+		},
+		"axe-iron-kapok": {
+			"wood": 8.82,
+			"plant": 5.25,
+			"leaves": 3.36
+		},
+		"axe-iron-larch": {
+			"wood": 8.4,
+			"plant": 5,
+			"leaves": 3.2
+		},
+		"axe-iron-redwood": {
+			"wood": 7.98,
+			"plant": 4.75,
+			"leaves": 3.04
+		},
+		"axe-iron-baldcypress": {
+			"wood": 7.56,
+			"plant": 4.5,
+			"leaves": 2.88
+		},
+		"axe-iron-oak": {
+			"wood": 7.56,
+			"plant": 4.5,
+			"leaves": 2.88
+		},
+		"axe-iron-pine": {
+			"wood": 7.14,
+			"plant": 4.25,
+			"leaves": 2.72
+		},
+		"axe-iron-birch": {
+			"wood": 6.72,
+			"plant": 4,
+			"leaves": 2.256
+		},
+		"axe-iron-walnut": {
+			"wood": 6.3,
+			"plant": 3.75,
+			"leaves": 2.4
+		},
+		"axe-iron-acacia": {
+			"wood": 5.88,
+			"plant": 3.5,
+			"leaves": 2.24
+		},
+		"axe-iron-maple": {
+			"wood": 5.88,
+			"plant": 3.5,
+			"leaves": 2.24
+		},
+		"axe-iron-purpleheart": {
+			"wood": 5.46,
+			"plant": 3.25,
+			"leaves": 2.08
+		},
+		"axe-iron-ebony": {
+			"wood": 4.62,
+			"plant": 2.75,
+			"leaves": 1.76
+		},
+
+		"axe-meteoriciron-aged": {
+			"wood": 10.56,
+			"plant": 6.05,
+			"leaves": 3.96
+		},
+		"axe-meteoriciron-kapok": {
+			"wood": 10.08,
+			"plant": 5.775,
+			"leaves": 3.78
+		},
+		"axe-meteoriciron-larch": {
+			"wood": 9.6,
+			"plant": 5.5,
+			"leaves": 3.6
+		},
+		"axe-meteoriciron-redwood": {
+			"wood": 9.12,
+			"plant": 5.225,
+			"leaves": 3.42
+		},
+		"axe-meteoriciron-baldcypress": {
+			"wood": 8.64,
+			"plant": 4.95,
+			"leaves": 3.24
+		},
+		"axe-meteoriciron-oak": {
+			"wood": 8.64,
+			"plant": 4.95,
+			"leaves": 3.24
+		},
+		"axe-meteoriciron-pine": {
+			"wood": 8.16,
+			"plant": 4.675,
+			"leaves": 3.06
+		},
+		"axe-meteoriciron-birch": {
+			"wood": 7.68,
+			"plant": 4.4,
+			"leaves": 2.88
+		},
+		"axe-meteoriciron-walnut": {
+			"wood": 7.2,
+			"plant": 4.125,
+			"leaves": 2.7
+		},
+		"axe-meteoriciron-acacia": {
+			"wood": 6.72,
+			"plant": 3.85,
+			"leaves": 2.52
+		},
+		"axe-meteoriciron-maple": {
+			"wood": 6.72,
+			"plant": 3.85,
+			"leaves": 2.52
+		},
+		"axe-meteoriciron-purpleheart": {
+			"wood": 6.24,
+			"plant": 3.575,
+			"leaves": 2.34
+		},
+		"axe-meteoriciron-ebony": {
+			"wood": 5.28,
+			"plant": 3.025,
+			"leaves": 1.98
+		},
+
+		"axe-steel-aged": {
+			"wood": 11.55,
+			"plant": 6.3,
+			"leaves": 4.2
+		},
+		"axe-steel-kapok": {
+			"wood": 11,
+			"plant": 6,
+			"leaves": 4
+		},
+		"axe-steel-larch": {
+			"wood": 10.45,
+			"plant": 5.7,
+			"leaves": 3.8
+		},
+		"axe-steel-redwood": {
+			"wood": 9.9,
+			"plant": 5.4,
+			"leaves": 3.6
+		},
+		"axe-steel-baldcypress": {
+			"wood": 9.35,
+			"plant": 5.1,
+			"leaves": 3.4
+		},
+		"axe-steel-oak": {
+			"wood": 9.35,
+			"plant": 5.1,
+			"leaves": 3.4
+		},
+		"axe-steel-pine": {
+			"wood": 8.8,
+			"plant": 4.8,
+			"leaves": 3.2
+		},
+		"axe-steel-birch": {
+			"wood": 8.25,
+			"plant": 4.5,
+			"leaves": 3
+		},
+		"axe-steel-walnut": {
+			"wood": 7.7,
+			"plant": 4.2,
+			"leaves": 2.8
+		},
+		"axe-steel-acacia": {
+			"wood": 7.15,
+			"plant": 3.9,
+			"leaves": 2.6
+		},
+		"axe-steel-maple": {
+			"wood": 7.15,
+			"plant": 3.9,
+			"leaves": 2.6
+		},
+		"axe-steel-purpleheart": {
+			"wood": 6.6,
+			"plant": 3.6,
+			"leaves": 2.4
+		},
+		"axe-steel-ebony": {
+			"wood": 5.5,
+			"plant": 3,
+			"leaves": 2
+		}
+	},
+	durabilitybytype: {
+		"axe-silver-aged": 142,
+		"axe-silver-kapok": 150,
+		"axe-silver-baldcypress": 158,
+		"axe-silver-redwood": 158,
+		"axe-silver-larch": 158,
+		"axe-silver-walnut": 165,
+		"axe-silver-pine": 165,
+		"axe-silver-oak": 165,
+		"axe-silver-birch": 172,
+		"axe-silver-maple": 180,
+		"axe-silver-acacia": 188,
+		"axe-silver-purpleheart": 195,
+		"axe-silver-ebony": 210,
+
+		"axe-gold-aged": 142,
+		"axe-gold-kapok": 150,
+		"axe-gold-baldcypress": 158,
+		"axe-gold-redwood": 158,
+		"axe-gold-larch": 158,
+		"axe-gold-walnut": 165,
+		"axe-gold-pine": 165,
+		"axe-gold-oak": 165,
+		"axe-gold-birch": 172,
+		"axe-gold-maple": 180,
+		"axe-gold-acacia": 188,
+		"axe-gold-purpleheart": 195,
+		"axe-gold-ebony": 210,
+
+		"axe-copper-aged": 285,
+		"axe-copper-kapok": 300,
+		"axe-copper-baldcypress": 315,
+		"axe-copper-redwood": 315,
+		"axe-copper-larch": 315,
+		"axe-copper-walnut": 330,
+		"axe-copper-pine": 330,
+		"axe-copper-oak": 330,
+		"axe-copper-birch": 345,
+		"axe-copper-maple": 360,
+		"axe-copper-acacia": 375,
+		"axe-copper-purpleheart": 390,
+		"axe-copper-ebony": 420,
+
+		"axe-tinbronze-aged": 450,
+		"axe-tinbronze-kapok": 475,
+		"axe-tinbronze-baldcypress": 500,
+		"axe-tinbronze-redwood": 500,
+		"axe-tinbronze-larch": 500,
+		"axe-tinbronze-walnut": 525,
+		"axe-tinbronze-pine": 525,
+		"axe-tinbronze-oak": 525,
+		"axe-tinbronze-birch": 550,
+		"axe-tinbronze-maple": 575,
+		"axe-tinbronze-acacia": 600,
+		"axe-tinbronze-purpleheart": 625,
+		"axe-tinbronze-ebony": 675,
+
+		"axe-bismuthbronze-aged": 540,
+		"axe-bismuthbronze-kapok": 570,
+		"axe-bismuthbronze-baldcypress": 600,
+		"axe-bismuthbronze-redwood": 600,
+		"axe-bismuthbronze-larch": 600,
+		"axe-bismuthbronze-walnut": 630,
+		"axe-bismuthbronze-pine": 630,
+		"axe-bismuthbronze-oak": 630,
+		"axe-bismuthbronze-birch": 660,
+		"axe-bismuthbronze-maple": 690,
+		"axe-bismuthbronze-acacia": 720,
+		"axe-bismuthbronze-purpleheart": 750,
+		"axe-bismuthbronze-ebony": 810,
+
+		"axe-blackbronze-aged": 675,
+		"axe-blackbronze-kapok": 712,
+		"axe-blackbronze-baldcypress": 750,
+		"axe-blackbronze-redwood": 750,
+		"axe-blackbronze-larch": 750,
+		"axe-blackbronze-walnut": 788,
+		"axe-blackbronze-pine": 788,
+		"axe-blackbronze-oak": 788,
+		"axe-blackbronze-birch": 825,
+		"axe-blackbronze-maple": 862,
+		"axe-blackbronze-acacia": 900,
+		"axe-blackbronze-purpleheart": 938,
+		"axe-blackbronze-ebony": 1012,
+
+		"axe-iron-aged": 935,
+		"axe-iron-kapok": 990,
+		"axe-iron-baldcypress": 1045,
+		"axe-iron-redwood": 1045,
+		"axe-iron-larch": 1045,
+		"axe-iron-walnut": 1100,
+		"axe-iron-pine": 1100,
+		"axe-iron-oak": 1100,
+		"axe-iron-birch": 1155,
+		"axe-iron-maple": 1210,
+		"axe-iron-acacia": 1265,
+		"axe-iron-purpleheart": 1320,
+		"axe-iron-ebony": 1430,
+
+		"axe-meteoriciron-aged": 1275,
+		"axe-meteoriciron-kapok": 1350,
+		"axe-meteoriciron-baldcypress": 1425,
+		"axe-meteoriciron-redwood": 1425,
+		"axe-meteoriciron-larch": 1425,
+		"axe-meteoriciron-walnut": 1500,
+		"axe-meteoriciron-pine": 1500,
+		"axe-meteoriciron-oak": 1500,
+		"axe-meteoriciron-birch": 1575,
+		"axe-meteoriciron-maple": 1650,
+		"axe-meteoriciron-acacia": 1725,
+		"axe-meteoriciron-purpleheart": 1800,
+		"axe-meteoriciron-ebony": 1950,
+
+		"axe-steel-aged": 1800,
+		"axe-steel-kapok": 1912,
+		"axe-steel-baldcypress": 2025,
+		"axe-steel-redwood": 2025,
+		"axe-steel-larch": 2025,
+		"axe-steel-walnut": 2138,
+		"axe-steel-pine": 2138,
+		"axe-steel-oak": 2138,
+		"axe-steel-birch": 2250,
+		"axe-steel-maple": 2362,
+		"axe-steel-acacia": 2475,
+		"axe-steel-purpleheart": 2588,
+		"axe-steel-ebony": 2812
+	},
+	attackpowerbytype: {
+		
+		"axe-copper-larch": 1.8,
+		"axe-copper-kapok": 1.8,
+		"axe-copper-aged": 1.8,
+		"axe-copper-redwood": 1.9,
+		"axe-copper-oak": 2,
+		"axe-copper-baldcypress": 2,
+		"axe-copper-pine": 2.1,
+		"axe-copper-birch": 2.2,
+		"axe-copper-maple": 2.3,
+		"axe-copper-walnut": 2.3,
+		"axe-copper-purpleheart": 2.4,
+		"axe-copper-acacia": 2.4,
+		"axe-copper-ebony": 2.6,
+
+		"axe-silver-larch": 2.25,
+		"axe-silver-kapok": 2.25,
+		"axe-silver-aged": 2.25,
+		"axe-silver-redwood": 2.375,
+		"axe-silver-oak": 2.5,
+		"axe-silver-baldcypress": 2.5,
+		"axe-silver-pine": 2.625,
+		"axe-silver-birch": 2.75,
+		"axe-silver-walnut": 2.875,
+		"axe-silver-maple": 2.875,
+		"axe-silver-purpleheart": 3,
+		"axe-silver-acacia": 3,
+		"axe-silver-ebony": 3.25,
+
+		"axe-gold-larch": 2.25,
+		"axe-gold-kapok": 2.25,
+		"axe-gold-aged": 2.25,
+		"axe-gold-redwood": 2.375,
+		"axe-gold-oak": 2.5,
+		"axe-gold-baldcypress": 2.5,
+		"axe-gold-pine": 2.625,
+		"axe-gold-birch": 2.75,
+		"axe-gold-walnut": 2.875,
+		"axe-gold-maple": 2.875,
+		"axe-gold-purpleheart": 3,
+		"axe-gold-acacia": 3,
+		"axe-gold-ebony": 3.25,
+
+		"axe-bismuthbronze-larch": 2.25,
+		"axe-bismuthbronze-kapok": 2.25,
+		"axe-bismuthbronze-aged": 2.25,
+		"axe-bismuthbronze-redwood": 2.375,
+		"axe-bismuthbronze-oak": 2.5,
+		"axe-bismuthbronze-baldcypress": 2.5,
+		"axe-bismuthbronze-pine": 2.625,
+		"axe-bismuthbronze-birch": 2.75,
+		"axe-bismuthbronze-walnut": 2.875,
+		"axe-bismuthbronze-maple": 2.875,
+		"axe-bismuthbronze-purpleheart": 3,
+		"axe-bismuthbronze-acacia": 3,
+		"axe-bismuthbronze-ebony": 3.25,
+
+		"axe-tinbronze-larch": 2.475,
+		"axe-tinbronze-kapok": 2.475,
+		"axe-tinbronze-aged": 2.475,
+		"axe-tinbronze-redwood": 2.612,
+		"axe-tinbronze-oak": 2.75,
+		"axe-tinbronze-baldcypress": 2.75,
+		"axe-tinbronze-pine": 2.888,
+		"axe-tinbronze-birch": 3.025,
+		"axe-tinbronze-maple": 3.162,
+		"axe-tinbronze-walnut": 3.162,
+		"axe-tinbronze-purpleheart": 3.3,
+		"axe-tinbronze-acacia": 3.3,
+		"axe-tinbronze-ebony": 3.575,
+
+		"axe-blackbronze-larch": 2.7,
+		"axe-blackbronze-kapok": 2.7,
+		"axe-blackbronze-aged": 2.7,
+		"axe-blackbronze-redwood": 2.85,
+		"axe-blackbronze-oak": 3,
+		"axe-blackbronze-baldcypress": 3,
+		"axe-blackbronze-pine": 3.15,
+		"axe-blackbronze-birch": 3.3,
+		"axe-blackbronze-maple": 3.45,
+		"axe-blackbronze-walnut": 3.45,
+		"axe-blackbronze-purpleheart": 3.6,
+		"axe-blackbronze-acacia": 3.6,
+		"axe-blackbronze-ebony": 3.9,
+
+		"axe-iron-larch": 2.7,
+		"axe-iron-kapok": 2.7,
+		"axe-iron-aged": 2.7,
+		"axe-iron-redwood": 2.85,
+		"axe-iron-oak": 3,
+		"axe-iron-baldcypress": 3,
+		"axe-iron-pine": 3.15,
+		"axe-iron-birch": 3.3,
+		"axe-iron-maple": 3.45,
+		"axe-iron-walnut": 3.45,
+		"axe-iron-purpleheart": 3.6,
+		"axe-iron-acacia": 3.6,
+		"axe-iron-ebony": 3.9,
+
+		"axe-meteoriciron-larch": 3.15,
+		"axe-meteoriciron-kapok": 3.15,
+		"axe-meteoriciron-aged": 3.15,
+		"axe-meteoriciron-redwood": 3.325,
+		"axe-meteoriciron-oak": 3.5,
+		"axe-meteoriciron-baldcypress": 3.5,
+		"axe-meteoriciron-pine": 3.675,
+		"axe-meteoriciron-birch": 3.85,
+		"axe-meteoriciron-maple": 4.025,
+		"axe-meteoriciron-walnut": 4.025,
+		"axe-meteoriciron-purpleheart": 4.2,
+		"axe-meteoriciron-acacia": 4.2,
+		"axe-meteoriciron-ebony": 4.55,
+
+		"axe-steel-larch": 3.6,
+		"axe-steel-kapok": 3.6,
+		"axe-steel-aged": 3.6,
+		"axe-steel-redwood": 3.8,
+		"axe-steel-oak": 4,
+		"axe-steel-baldcypress": 4,
+		"axe-steel-pine": 4.2,
+		"axe-steel-birch": 4.4,
+		"axe-steel-maple": 4.6,
+		"axe-steel-walnut": 4.6,
+		"axe-steel-purpleheart": 4.8,
+		"axe-steel-acacia": 4.8,
+		"axe-steel-ebony": 5.2
+	},
+	creativeinventory: { "general": ["*"], "betterhandles": ["*"] },
+
+	fpHandTransform: {
+		translation: { x: -0.3, y: -0.5, z: 0.3 },
+		rotation: { x: -29, y: 1, z: 88 },
+		origin: { x: 0.2, y: 0.5, z: 0.5 },
+		scale: 2.5
+	},
+	guiTransformByType: {
+		"*":
+		{
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -63, y: -123, z: -180 },
+			origin: { x: 0.61, y: 0, z: 0.47 },
+			scale: 1.58
+		}
+	},
+	groundTransformByType: {
+		"*":
+		{
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 3.6
+		}
+	},
+	tpHandTransformByType: {
+		"*":
+		{
+			translation: { x: -0.89, y: -0.5, z: -0.1 },
+			rotation: { x: 90, y: 0, z: -10 },
+			scale: 0.95
+		}
+	}
+}

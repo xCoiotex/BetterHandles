@@ -1,0 +1,24 @@
+{
+    "game:tabname-betterhandles": "Betterhandles",
+    "game:betterhandles-guide-title": "Betterhandles Guide",
+    "game:betterhandles-guide-text":
+    "<strong>Betterhandles Survival Guide</strong>
+    <i>A Overhaul in tools durabilities, new range of wooden based handles tools, a new progression for making tools for Vintage Story</i>",
+
+    "game:item-shovel-bone-chert": "Chert Shovel",
+    "game:item-hoe-bone-chert": "Chert Hoe",
+    "game:item-hoe-bone-granite": "Granite Hoe",
+    "game:item-hoe-bone-andesite": "Andesite Hoe",
+    "game:item-hoe-bone-basalt": "Basalt Hoe",
+    "game:item-hoe-bone-obsidian": "Obsidian Hoe",
+    "game:item-hoe-bone-flint": "Flint Hoe",
+    "game:item-hoe-bone-peridotite": "Peridotite Hoe",
+    "game:item-spear-bone-chert": "Chert Spear",
+    "game:item-spear-bone-granite": "Granite Spear",
+    "game:item-spear-bone-andesite": "Andesite Spear",
+    "game:item-spear-bone-basalt": "Basalt Spear",
+    "game:item-spear-bone-obsidian": "Obsidian Spear",
+    "game:item-spear-bone-flint": "Flint Spear",
+    "game:item-spear-bone-peridotite": "Peridotite Spear"
+    
+}
