@@ -9,7 +9,7 @@
 	},
 
 	variantgroups: [
-		{ code: "handle", states: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart", "aged" ], loadFromProperties: "game:block/wood/debarked" }
+		{ code: "handle", states: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart", "aged" ], loadFromProperties: "game:block/wood/debarked/{handle}" }
 	],
 
 	texturesByType: {
@@ -24,7 +24,7 @@
 	attackRange: 2.5,
 	combustibleProps: {
 		burnTemperature: 700,
-		burnDuration: 8,
+		burnDuration: 8
 	},
 	fpHandTransform: {
 		translation: { x: 0, y: 0, z: 0 },

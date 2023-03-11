@@ -8,7 +8,7 @@
 		},
 		"width": 1,
 		"height": 3,
-		"output": { "type": "item", "code": "game:hoe-{material}", "quantity": 1  }
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}", "quantity": 1  }
 	},
 	{
 		"ingredientPattern": "T,C,B",
@@ -19,7 +19,7 @@
 		},
 		"width": 1,
 		"height": 3,
-		"output": { "type": "item", "code": "game:hoe-bone-{material}", "quantity": 1  }
+		"output": { "type": "item", "code": "betterhandles:hoe-bone-{material}", "quantity": 1  }
 	},
 
 	{
