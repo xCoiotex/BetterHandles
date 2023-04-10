@@ -38,16 +38,7 @@
 		  ] }
 	],
 	damagedby: ["blockbreaking", "attacking"],
-	shapeByType: {
-		"*-chert": { "base": "game:item/tool/hoe-stone" },
-		"*-granite": { "base": "game:item/tool/hoe-stone" },
-		"*-andesite": { "base": "game:item/tool/hoe-stone" },
-		"*-basalt": { "base": "game:item/tool/hoe-stone" },
-		"*-obsidian": { "base": "game:item/tool/hoe-stone" },
-		"*-peridotite": { "base": "game:item/tool/hoe-stone" },
-		"*-flint": { "base": "game:item/tool/hoe-stone" },
-		"*-bone-*": { "base": "game:item/tool/hoe-stone" }
-	},
+	shape: { base: "game:item/tool/hoe-stone" },
 	heldTpHitAnimation: "breaktool",
 	texturesByType: {
 		"hoe-flint": {
@@ -96,41 +87,57 @@
 	tool: "hoe",
 	miningspeedbytype: {
 		"@hoe-(chert|granite|andesite|basalt|peridotite)": {
-			"soil": 1.8
+			"soil": 1.5
 		},
 		"hoe-obsidian": {
-			"soil": 2.0
+			"soil": 2.1
 		},
 		"hoe-flint": {
-			"soil": 2.0
+			"soil": 1.8
 		},
 		"@hoe-bone-(chert|granite|andesite|basalt|peridotite)": {
-			"soil": 1.62
+			"soil": 1.275
 		},
-		"@hoe-bone-(flint|obsidian)": {
-			"soil": 1.8
+		"hoe-bone-flint": {
+			"soil": 1.53
+		},
+		"hoe-bone-obsidian": {
+			"soil": 1.785
 		}
 	},
 	durabilitybytype: {
-		"hoe-chert": 40,
-		"hoe-granite": 40,
-		"hoe-andesite": 40,
-		"hoe-basalt": 45,
-		"hoe-obsidian": 60,
-		"hoe-peridotite": 40,
-		"hoe-flint": 50,
+		"hoe-chert": 30,
+		"hoe-granite": 30,
+		"hoe-andesite": 30,
+		"hoe-basalt": 30,
+		"hoe-obsidian": 50,
+		"hoe-peridotite": 30,
+		"hoe-flint": 40,
 
-		"hoe-bone-chert": 50,
-		"hoe-bone-granite": 50,
-		"hoe-bone-andesite": 50,
-		"hoe-bone-basalt": 55,
-		"hoe-bone-obsidian": 80,
-		"hoe-bone-peridotite": 50,
-		"hoe-bone-flint": 60
+		"hoe-bone-chert": 42,
+		"hoe-bone-granite": 42,
+		"hoe-bone-andesite": 42,
+		"hoe-bone-basalt": 42,
+		"hoe-bone-obsidian": 70,
+		"hoe-bone-peridotite": 42,
+		"hoe-bone-flint": 56
 	},
 	attackpowerbytype: {
-		"@hoe-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1,
-		"@hoe-bone-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1.1
+		"hoe-chert": 0.6,
+		"hoe-granite": 0.6,
+		"hoe-andesite": 0.6,
+		"hoe-basalt": 0.6,
+		"hoe-obsidian": 0.9,
+		"hoe-peridotite": 0.6,
+		"hoe-flint": 0.75,
+
+		"hoe-bone-chert": 0.78,
+		"hoe-bone-granite": 0.78,
+		"hoe-bone-andesite": 0.78,
+		"hoe-bone-basalt": 0.78,
+		"hoe-bone-obsidian": 1.17,
+		"hoe-bone-peridotite": 0.78,
+		"hoe-bone-flint": 0.975
 	},
 	creativeinventory: { "general": ["*"], "betterhandles": ["*"] },
 	fpHandTransform: {

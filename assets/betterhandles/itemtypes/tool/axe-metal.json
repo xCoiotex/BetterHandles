@@ -665,7 +665,7 @@
 		}
 	},
 	durabilitybytype: {
-		"axe-silver-aged": 3,
+		"axe-silver-aged": 142,
 		"axe-silver-kapok": 150,
 		"axe-silver-baldcypress": 158,
 		"axe-silver-redwood": 158,
@@ -679,7 +679,7 @@
 		"axe-silver-purpleheart": 195,
 		"axe-silver-ebony": 210,
 
-		"axe-gold-aged": 3,
+		"axe-gold-aged": 142,
 		"axe-gold-kapok": 150,
 		"axe-gold-baldcypress": 158,
 		"axe-gold-redwood": 158,
@@ -693,14 +693,14 @@
 		"axe-gold-purpleheart": 195,
 		"axe-gold-ebony": 210,
 
-		"axe-copper-aged": 3,
+		"axe-copper-aged": 285,
 		"axe-copper-kapok": 300,
 		"axe-copper-baldcypress": 315,
 		"axe-copper-redwood": 315,
 		"axe-copper-larch": 315,
 		"axe-copper-pine": 330,
-		"axe-copper-oak": 3,
-		"axe-copper-birch": 3,
+		"axe-copper-oak": 330,
+		"axe-copper-birch": 345,
 		"axe-copper-walnut": 345,
 		"axe-copper-maple": 360,
 		"axe-copper-acacia": 375,
