@@ -1,0 +1,90 @@
+{
+	code: "club",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	class: "ItemSword",
+	attributes: {
+		handbook: {
+			groupBy: ["club-*"]
+		},
+		toolrackTransformByType: {
+			"*-bone": {
+				translation: { x: -0.3, y: 0.6, z: -0.1 },
+				rotation: { x: 97, y: 180, z: 3 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 1.8
+			}
+		},
+		groundStorageTransformByType: {
+			"*-bone": {
+				translation: { x: 0, y: 0.04, z: -0.054 },
+				rotation: { x: 26, y: 88, z: -87 },
+				scale: 1
+			}
+		}
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 1,
+			PlaceRemoveSound: "game:sounds/block/loosestick",
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		}
+	}],
+	variantgroups: [
+		{ code: "type", states: ["bone"]}
+	],
+	shapeByType: {
+		"*bone": { "base": "betterhandles:item/tool/boneclub"}
+	},
+	heldTpHitAnimationByType: {
+		"*": "falx"
+	},
+	texturesByType: {
+		"*-bone":{}
+	},
+	attackRange: 1.75,
+	attackpowerbytype: {
+		"club-bone": 1.65
+	},
+	durabilitybytype: {
+		"club-bone": 86
+	},
+	creativeinventoryByType: {
+		"*": { "general": ["*"], "betterhandles": ["*"] }
+	},
+	guiTransformByType: {
+		"*-bone": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -158, y: 0, z: 48 },
+			origin: { x: 0.48, y: 0.1, z: 0.5 },
+			scale: 2.41
+		}
+	},
+	fpHandTransformByType: {
+		"*-bone": {
+			translation: { x: -0.2, y: -0.2, z: 0 },
+			rotation: { x: -3, y: 15, z: 90 },
+			scale: 3
+		}
+	},
+	groundTransformByType: {
+		"*-bone": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.5, z: 0.45 },
+			scale: 3.6
+		}
+	},
+	tpHandTransformByType: {
+		"*-bone": {
+				translation: { x: -0.85, y: -0.2, z: -0.48 },
+				rotation: { x: 0, y: 0, z: -30 },
+				scale: 1
+			}
+	}
+}

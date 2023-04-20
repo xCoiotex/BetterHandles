@@ -1,0 +1,136 @@
+{
+	code: "club",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	class: "ItemSword",
+	attributes: {
+		handbook: {
+			groupBy: ["club-*"]
+		},
+		toolrackTransformByType: {
+			"*": {
+				translation: { x: -0.4, y: 0.55, z: -0.1 },
+				rotation: { x: 90, y: 182, z: 3 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 1.7
+			}
+		},
+		groundStorageTransformByType: {
+			"*": {
+				translation: { x: 0, y: 0.08, z: -0.078 },
+				rotation: { x: 26, y: 88, z: -87 },
+				scale: 0.98
+			}
+		}
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 1,
+			PlaceRemoveSound: "game:sounds/block/hewnfancegate",
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		}
+	}],
+	variantgroups: [
+		{ code: "type", states: ["birch", "oak", "maple", "pine","acacia","kapok","baldcypress","larch",
+		"redwood", "ebony", "walnut", "purpleheart", "aged"
+		]}
+	],
+	shapeByType: {
+		"*": { "base": "betterhandles:item/tool/club" }
+	},
+	heldTpHitAnimationByType: {
+		"*": "falx"
+	},
+	combustiblePropsByType: {
+		"*acacia":{
+			burnTemperature: 700,
+			burnDuration: 28
+		},
+		"*purpleheart":{
+			burnTemperature: 700,
+			burnDuration: 32
+		},
+		"*ebony":{
+			burnTemperature: 750,
+			burnDuration: 32
+		},
+		"*":{
+			burnTemperature: 700,
+			burnDuration: 24
+		}
+	},
+	texturesByType: {
+		"@*-(birch|oak|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart|aged)":{
+			"woodenclub": { "base": "betterhandles:block/{type}" }
+		}
+	},
+	attackRange: 2,
+	attackpowerbytype: {
+		"club-aged": 1.35,
+		"club-kapok": 1.35,
+		"club-larch": 1.35,
+		"club-redwood": 1.425,
+		"club-baldcypress": 1.5,
+		"club-oak": 1.5,
+		"club-pine": 1.575,
+		"club-birch": 1.65,
+		"club-walnut": 1.725,
+		"club-maple": 1.725,
+		"club-acacia": 1.8,
+		"club-purpleheart": 1.8,
+		"club-ebony": 1.95
+	},
+	durabilitybytype: {
+		"club-aged": 142,
+		"club-kapok": 150,
+		"club-larch": 157,
+		"club-redwood": 157,
+		"club-baldcypress": 157,
+		"club-oak": 165,
+		"club-pine": 165,
+		"club-birch": 172,
+		"club-walnut": 172,
+		"club-maple": 180,
+		"club-acacia": 187,
+		"club-purpleheart": 195,
+		"club-ebony": 210
+	},
+	creativeinventoryByType: {
+		"*": { "general": ["*"], "betterhandles": ["*"] }
+	},
+	guiTransformByType: {
+		"*": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -158, y: 0, z: 48 },
+			origin: { x: 0.48, y: 0.1, z: 0.5 },
+			scale: 2.1
+		}
+	},
+	fpHandTransformByType: {
+		"*": {
+			translation: { x: -0.2, y: -0.2, z: 0 },
+			rotation: { x: -3, y: 15, z: 90 },
+			scale: 2.8
+		}
+	},
+	groundTransformByType: {
+		"*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -90, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.5, z: 0.45 },
+			scale: 3.6
+		}
+	},
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -0.85, y: -0.2, z: -0.48 },
+			rotation: { x: 0, y: 0, z: -30 },
+			scale: 1
+		}
+	}
+}

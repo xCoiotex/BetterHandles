@@ -1,0 +1,247 @@
+{
+	code: "blade",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	class: "ItemSword",
+	attributes: {
+		handbook: {
+			groupBy: ["blade-*"]
+		},
+		toolrackTransformByType: {
+			"*":
+				{
+					rotation: { y: 180, z: 1 },
+					translation: { x: -0.1, y: 0.6 },
+					scale: 1.25
+				}
+		},
+		groundStorageTransformByType: {
+			"blade-curved-*": {
+				translation: { x: -0.2, y: 0.08, z: 0.2 },
+				rotation: { x: 22, y: 180, z: -90 },
+				scale: 0.88
+			},
+			"blade-thrusting-*": {
+				translation: { x: 0, y: 0.3, z: -0.047 },
+				rotation: { x: 22, y: 88, z: -87 },
+				scale: 0.88
+			},
+			"blade-falx-*": {
+				translation: { x: 0.07, y: 0.055, z: 0 },
+				rotation: { x: 26, y: 61, z: -87 },
+				scale: 0.88
+			},
+			"*": {
+				translation: { x: 0, y: 0.06, z: -0.025 },
+				rotation: { x: 26, y: 90, z: -90 },
+				scale: 0.88
+			}
+		},
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			PlaceRemoveSound: "game:sounds/tool/slash",
+			wallOffYByType: {
+				"blade-thrusting-*": 2,
+				"*": 1
+			},
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		}
+	}],
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel"] },
+		{ code: "handle", states: ["birch", "oak", "maple", "pine","acacia","kapok","baldcypress","larch",
+		"redwood", "ebony", "walnut", "purpleheart", "aged" ]}
+	],
+	allowedVariants: [
+		"blade-falx-*"
+	],
+	shapeByType: {
+		"*": { base: "game:item/tool/blade/{metal}" }
+	},
+	heldTpHitAnimationByType: {
+		"*": "falx"
+	},
+	texturesByType: {
+		"@*blade-falx-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)-(birch|oak|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart|aged)":{
+			"handle": {"base": "betterhandles:block/{handle}"}
+		}
+
+	},
+	attackRange: 2.5,
+	tooltierbytype: {
+		"*-copper": 2,
+		"*-gold": 5,
+		"*-silver": 5,
+		"*-bismuthbronze": 3,
+		"*-tinbronze": 3,
+		"*-blackbronze": 3,
+		"*-iron": 4,
+		"*-meteoriciron": 4,
+		"*-steel": 5,
+	},
+	miningspeedbytype: {
+		"blade-falx-copper": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-bismuthbronze": {
+			"wood": 2.3,
+			"leaves": 2
+		},
+		"blade-falx-tinbronze": {
+			"wood": 2.4,
+			"leaves": 2.2
+		},
+		"blade-falx-gold": {
+			"wood": 3.5,
+			"leaves": 4
+		},
+		"blade-falx-silver": {
+			"wood": 3.5,
+			"leaves": 4
+		},
+		"blade-falx-blackbronze": {
+			"wood": 2.5,
+			"leaves": 2.3
+		},
+		"blade-falx-iron": {
+			"wood": 3,
+			"leaves": 3
+		},
+		"blade-falx-meteoriciron": {
+			"wood": 3.25,
+			"leaves": 3.5
+		},
+		"blade-falx-steel": {
+			"wood": 3.5,
+			"leaves": 4
+		}
+	},
+	attackpowerbytype: {
+		"blade-falx-copper": 3.75,
+		"blade-falx-bismuthbronze": 4.25,
+		"blade-falx-tinbronze": 4.25,
+		"blade-falx-blackbronze": 4.75,
+		"blade-falx-iron": 5,
+		"blade-falx-meteoriciron": 5.25,
+		"blade-falx-steel": 5.25,
+		"blade-falx-gold": 5.25,
+		"blade-falx-silver": 5.25,
+	},
+	durabilitybytype: {
+		"blade-falx-copper": 250,
+		"blade-falx-tinbronze": 450,
+		"blade-falx-bismuthbronze": 530,
+		"blade-falx-blackbronze": 600,
+		"blade-falx-iron": 850,
+		"blade-falx-meteoriciron": 1100,
+		"blade-falx-steel": 2125,
+		"blade-falx-gold": 2125,
+		"blade-falx-silver": 2125
+	},
+	creativeinventoryByType: {
+		"*": { "general": ["*"], "items": ["*"], "tools": ["*"] }
+	},
+	guiTransformByType: {
+		"blade-curved-scrap":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -94, y: 47, z: 44 },
+				origin: { x: 0.73, y: 0, z: 0.48 },
+				scale: 2.2
+			},
+		"blade-short-blackguard":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -89, y: 47, z: -13 },
+				origin: { x: 0.6, y: -0.1, z: 0.44 },
+				scale: 1.65
+			},
+		"blade-thrusting-forlorn":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -89, y: 47, z: 44 },
+				origin: { x: 0.6, y: -0.2, z: 0.44 },
+				scale: 1.42
+			},
+		"blade-long-admin":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -53, y: 118, z: -5 },
+				origin: { x: 0.64, y: 0.1, z: 0.44 },
+				scale: 1.65
+			},
+		"*":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -53, y: 118, z: -5 },
+				origin: { x: 0.65, y: 0.1, z: 0.37 },
+				scale: 1.65
+			}
+	},
+	fpHandTransformByType: {
+		"blade-curved-scrap":
+			{
+				translation: { x: -0.2, y: -0.4, z: 0 },
+				rotation: { x: -13, y: 15, z: 90 },
+				scale: 3.69
+			},
+		"*":
+			{
+				translation: { x: -0.2, y: -0.2, z: 0 },
+				rotation: { x: -3, y: 15, z: 90 },
+				scale: 3.18
+			}
+	},
+	groundTransformByType: {
+		"blade-curved-scrap":
+			{
+				translation: { x: 0, y: 0.05, z: 0 },
+				rotation: { x: 0, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 3.67
+			},
+		"*":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: 0, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 3.4
+			}
+	},
+	tpHandTransformByType: {
+		"blade-curved-scrap":
+			{
+				translation: { x: -0.65, y: -0.01, z: -0.53 },
+				rotation: { x: 90, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 0.91
+			},
+		"blade-short-blackguard":
+			{
+				translation: { x: -1.03, y: -0.01, z: -0.56 },
+				rotation: { x: -90, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 0.8
+			},
+		"blade-thrusting-forlorn":
+			{
+				translation: { x: -1, y: -0.01, z: -0.62 },
+				rotation: { x: -90, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 0.8
+			},
+		"*":
+			{
+				translation: { x: -1.03, y: -0.005, z: -0.66 },
+				rotation: { x: 85, y: 0, z: 2 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 0.8
+			}
+	}
+}
