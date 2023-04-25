@@ -1,0 +1,1054 @@
+{
+	code: "shovel",
+	attributes: {
+		handbook: {
+			groupBy: ["shovel-*"]
+		},
+		toolrackTransformByType: {
+			"*":
+			{
+				rotation: { y: 1, z: -1 },
+				translation: { x: -0.47, y: 0.6 },
+				scale: 1.25,
+			}
+		},
+		groundStorageTransform: {
+			translation: { x: 0, y: 0.26, z: -0.035 },
+			rotation: { x: 13, y: 88, z: -87 },
+			scale: 0.88
+		}
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 2,
+			PlaceRemoveSound: "game:sounds/tool/breakreinforced",
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+		}
+	}],
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", 
+																 "gold", "silver", "iron", "meteoriciron", "steel"
+		  	] },
+		{ code: "handle", states: ["birch", "oak", "maple", "pine","acacia","kapok","baldcypress","larch",
+									"redwood", "ebony", "walnut", "purpleheart", "aged"
+			] }
+	],
+	tool: "shovel",
+	damagedby: ["blockbreaking", "attacking"],
+	shapeByType: {
+		"*-copper-*": { "base": "game:item/tool/shovel-copper" },
+		"*-tinbronze-*": { "base": "game:item/tool/shovel-copper" },
+		"*-bismuthbronze-*": { "base": "game:item/tool/shovel-copper" },
+		"*-blackbronze-*": { "base": "game:item/tool/shovel-copper" },
+		"*-gold-*": { "base": "game:item/tool/shovel-copper" },
+		"*-silver-*": { "base": "game:item/tool/shovel-copper" },
+		"*-iron-*": { "base": "game:item/tool/shovel-copper" },
+		"*-meteoriciron-*": { "base": "game:item/tool/shovel-copper" },
+		"*-steel-*": { "base": "game:item/tool/shovel-copper" }
+	},
+	heldTpHitAnimation: "shoveldig",
+	texturesByType: {
+		"@*-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)-(acacia|aged|baldcypress|birch|bone|ebony|kapok|larch|maple|oak|pine|purpleheart|redwood|walnut)":{
+			"material": { "base": "game:block/metal/ingot/{material}" },
+			"handle": {"base": "betterhandles:block/{handle}"}
+		}
+	},
+	attackRange: 2,
+	miningspeedbytype: {
+		"shovel-copper-aged": {
+			"soil": 4.8,
+			"sand": 4.8,
+			"gravel": 3.12,
+			"snow": 3.12
+		},
+		"shovel-copper-kapok": {
+			"soil": 4.6,
+			"sand": 4.6,
+			"gravel": 2.99,
+			"snow": 2.99
+		},
+		"shovel-copper-larch": {
+			"soil": 4.4,
+			"sand": 4.4,
+			"gravel": 2.86,
+			"snow": 2.86
+		},
+		"shovel-copper-redwood": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.73,
+			"snow": 2.73
+		},
+		"shovel-copper-baldcypress": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-copper-oak": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-copper-pine": {
+			"soil": 3.8,
+			"sand": 3.8,
+			"gravel": 2.47,
+			"snow": 2.47
+		},
+		"shovel-copper-birch": {
+			"soil": 3.6,
+			"sand": 3.6,
+			"gravel": 2.34,
+			"snow": 2.34
+		},
+		"shovel-copper-walnut": {
+			"soil": 3.4,
+			"sand": 3.4,
+			"gravel": 2.21,
+			"snow": 2.21
+		},
+		"shovel-copper-acacia": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-copper-maple": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-copper-purpleheart": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 1.95,
+			"snow": 1.95
+		},
+		"shovel-copper-ebony": {
+			"soil": 2.6,
+			"sand": 2.6,
+			"gravel": 1.69,
+			"snow": 1.69
+		},
+
+		"shovel-silver-aged": {
+			"soil": 4.8,
+			"sand": 4.8,
+			"gravel": 3.12,
+			"snow": 3.12
+		},
+		"shovel-silver-kapok": {
+			"soil": 4.6,
+			"sand": 4.6,
+			"gravel": 2.99,
+			"snow": 2.99
+		},
+		"shovel-silver-larch": {
+			"soil": 4.4,
+			"sand": 4.4,
+			"gravel": 2.86,
+			"snow": 2.86
+		},
+		"shovel-silver-redwood": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.73,
+			"snow": 2.73
+		},
+		"shovel-silver-baldcypress": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-silver-oak": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-silver-pine": {
+			"soil": 3.8,
+			"sand": 3.8,
+			"gravel": 2.47,
+			"snow": 2.47
+		},
+		"shovel-silver-birch": {
+			"soil": 3.6,
+			"sand": 3.6,
+			"gravel": 2.34,
+			"snow": 2.34
+		},
+		"shovel-silver-walnut": {
+			"soil": 3.4,
+			"sand": 3.4,
+			"gravel": 2.21,
+			"snow": 2.21
+		},
+		"shovel-silver-acacia": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-silver-maple": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-silver-purpleheart": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 1.95,
+			"snow": 1.95
+		},
+		"shovel-silver-ebony": {
+			"soil": 2.6,
+			"sand": 2.6,
+			"gravel": 1.69,
+			"snow": 1.69
+		},
+
+		"shovel-gold-aged": {
+			"soil": 4.8,
+			"sand": 4.8,
+			"gravel": 3.12,
+			"snow": 3.12
+		},
+		"shovel-gold-kapok": {
+			"soil": 4.6,
+			"sand": 4.6,
+			"gravel": 2.99,
+			"snow": 2.99
+		},
+		"shovel-gold-larch": {
+			"soil": 4.4,
+			"sand": 4.4,
+			"gravel": 2.86,
+			"snow": 2.86
+		},
+		"shovel-gold-redwood": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.73,
+			"snow": 2.73
+		},
+		"shovel-gold-baldcypress": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-gold-oak": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-gold-pine": {
+			"soil": 3.8,
+			"sand": 3.8,
+			"gravel": 2.47,
+			"snow": 2.47
+		},
+		"shovel-gold-birch": {
+			"soil": 3.6,
+			"sand": 3.6,
+			"gravel": 2.34,
+			"snow": 2.34
+		},
+		"shovel-gold-walnut": {
+			"soil": 3.4,
+			"sand": 3.4,
+			"gravel": 2.21,
+			"snow": 2.21
+		},
+		"shovel-gold-acacia": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-gold-maple": {
+			"soil": 3.2,
+			"sand": 3.2,
+			"gravel": 2.08,
+			"snow": 2.08
+		},
+		"shovel-gold-purpleheart": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 1.95,
+			"snow": 1.95
+		},
+		"shovel-gold-ebony": {
+			"soil": 2.6,
+			"sand": 2.6,
+			"gravel": 1.69,
+			"snow": 1.69
+		},
+
+		"shovel-bismuthbronze-aged": {
+			"soil": 5.75,
+			"sand": 5.75,
+			"gravel": 3.68,
+			"snow": 3.68
+		},
+		"shovel-bismuthbronze-kapok": {
+			"soil": 5.5,
+			"sand": 5.5,
+			"gravel":3.52,
+			"snow": 3.52
+		},
+		"shovel-bismuthbronze-larch": {
+			"soil": 5.25,
+			"sand": 5.25,
+			"gravel": 3.36,
+			"snow": 3.36
+		},
+		"shovel-bismuthbronze-redwood": {
+			"soil": 5,
+			"sand": 5,
+			"gravel": 3.2,
+			"snow": 3.2
+		},
+		"shovel-bismuthbronze-baldcypress": {
+			"soil": 4.75,
+			"sand": 4.75,
+			"gravel": 3.04,
+			"snow": 3.04
+		},
+		"shovel-bismuthbronze-oak": {
+			"soil": 4.75,
+			"sand": 4.75,
+			"gravel": 3.04,
+			"snow": 3.04
+		},
+		"shovel-bismuthbronze-pine": {
+			"soil": 4.5,
+			"sand": 4.5,
+			"gravel": 2.88,
+			"snow": 2.88
+		},
+		"shovel-bismuthbronze-birch": {
+			"soil": 4.25,
+			"sand": 4.25,
+			"gravel": 2.72,
+			"snow": 2.72
+		},
+		"shovel-bismuthbronze-walnut": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.56,
+			"snow": 2.56
+		},
+		"shovel-bismuthbronze-acacia": {
+			"soil": 3.75,
+			"sand": 3.75,
+			"gravel": 2.4,
+			"snow": 2.4
+		},
+		"shovel-bismuthbronze-maple": {
+			"soil": 3.75,
+			"sand": 3.75,
+			"gravel": 2.4,
+			"snow": 2.4
+		},
+		"shovel-bismuthbronze-purpleheart": {
+			"soil": 3.5,
+			"sand": 3.5,
+			"gravel": 2.24,
+			"snow": 2.24
+		},
+		"shovel-bismuthbronze-ebony": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 1.92,
+			"snow": 1.92
+		},
+
+		"shovel-tinbronze-aged": {
+			"soil": 6.21,
+			"sand": 6.21,
+			"gravel": 4.14,
+			"snow": 4.14
+		},
+		"shovel-tinbronze-kapok": {
+			"soil": 5.94,
+			"sand": 5.94,
+			"gravel": 3.96,
+			"snow": 3.96
+		},
+		"shovel-tinbronze-larch": {
+			"soil": 5.67,
+			"sand": 5.67,
+			"gravel": 3.78,
+			"snow": 3.78
+		},
+		"shovel-tinbronze-redwood": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6,
+			"snow": 3.6
+		},
+		"shovel-tinbronze-baldcypress": {
+			"soil": 5.13,
+			"sand": 5.13,
+			"gravel": 3.42,
+			"snow": 3.42
+		},
+		"shovel-tinbronze-oak": {
+			"soil": 5.13,
+			"sand": 5.13,
+			"gravel": 3.42,
+			"snow": 3.42
+		},
+		"shovel-tinbronze-pine": {
+			"soil": 4.86,
+			"sand": 4.86,
+			"gravel": 3.24,
+			"snow": 3.24
+		},
+		"shovel-tinbronze-birch": {
+			"soil": 4.59,
+			"sand": 4.59,
+			"gravel": 3.06,
+			"snow": 3.06
+		},
+		"shovel-tinbronze-walnut": {
+			"soil": 4.32,
+			"sand": 4.32,
+			"gravel": 2.88,
+			"snow": 2.88
+		},
+		"shovel-tinbronze-acacia": {
+			"soil": 4.05,
+			"sand": 4.05,
+			"gravel": 2.7,
+			"snow": 2.7
+		},
+		"shovel-tinbronze-maple": {
+			"soil": 4.05,
+			"sand": 4.05,
+			"gravel": 2.7,
+			"snow": 2.7
+		},
+		"shovel-tinbronze-purpleheart": {
+			"soil": 3.78,
+			"sand": 3.78,
+			"gravel": 2.52,
+			"snow": 2.52
+		},
+		"shovel-tinbronze-ebony": {
+			"soil": 3.24,
+			"sand": 3.24,
+			"gravel": 2.16,
+			"snow": 2.16
+		},
+
+		"shovel-blackbronze-aged": {
+			"soil": 6.325,
+			"sand": 6.325,
+			"gravel": 4.255,
+			"snow": 4.255
+		},
+		"shovel-blackbronze-kapok": {
+			"soil": 6.05,
+			"sand": 6.05,
+			"gravel": 4.07,
+			"snow": 4.07
+		},
+		"shovel-blackbronze-larch": {
+			"soil":5.775,
+			"sand": 5.775,
+			"gravel": 3.885,
+			"snow": 3.885
+		},
+		"shovel-blackbronze-redwood": {
+			"soil": 5.5,
+			"sand": 5.5,
+			"gravel": 3.7,
+			"snow": 3.7
+		},
+		"shovel-blackbronze-baldcypress": {
+			"soil": 5.225,
+			"sand": 5.225,
+			"gravel": 3.515,
+			"snow": 3.515
+		},
+		"shovel-blackbronze-oak": {
+			"soil": 5.225,
+			"sand": 5.225,
+			"gravel": 3.515,
+			"snow": 3.515
+		},
+		"shovel-blackbronze-pine": {
+			"soil": 4.95,
+			"sand": 4.95,
+			"gravel": 3.33,
+			"snow": 3.33
+		},
+		"shovel-blackbronze-birch": {
+			"soil": 4.675,
+			"sand": 4.675,
+			"gravel": 3.145,
+			"snow": 3.145
+		},
+		"shovel-blackbronze-walnut": {
+			"soil": 4.4,
+			"sand": 4.4,
+			"gravel": 2.96,
+			"snow": 2.96
+		},
+		"shovel-blackbronze-acacia": {
+			"soil": 4.125,
+			"sand": 4.125,
+			"gravel": 2.775,
+			"snow": 2.775
+		},
+		"shovel-blackbronze-maple": {
+			"soil": 4.125,
+			"sand": 4.125,
+			"gravel": 2.775,
+			"snow": 2.775
+		},
+		"shovel-blackbronze-purpleheart": {
+			"soil": 3.85,
+			"sand": 3.85,
+			"gravel": 2.59,
+			"snow": 2.59
+		},
+		"shovel-blackbronze-ebony": {
+			"soil": 3.3,
+			"sand": 3.3,
+			"gravel": 2.22,
+			"snow": 2.22
+		},
+
+		"shovel-iron-aged": {
+			"soil": 6.6,
+			"sand": 6.6,
+			"gravel": 4.4,
+			"snow": 4.4
+		},
+		"shovel-iron-kapok": {
+			"soil": 6.3,
+			"sand": 6.3,
+			"gravel": 4.2,
+			"snow": 4.2
+		},
+		"shovel-iron-larch": {
+			"soil": 6,
+			"sand": 6,
+			"gravel": 4,
+			"snow": 4
+		},
+		"shovel-iron-redwood": {
+			"soil": 5.7,
+			"sand": 5.7,
+			"gravel": 3.8,
+			"snow": 3.8
+		},
+		"shovel-iron-baldcypress": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6,
+			"snow": 3.6
+		},
+		"shovel-iron-oak": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6,
+			"snow": 3.6
+		},
+		"shovel-iron-pine": {
+			"soil": 5.1,
+			"sand": 5.1,
+			"gravel": 3.4,
+			"snow": 3.4
+		},
+		"shovel-iron-birch": {
+			"soil": 4.8,
+			"sand": 4.8,
+			"gravel": 3.2,
+			"snow": 3.2
+		},
+		"shovel-iron-walnut": {
+			"soil": 4.5,
+			"sand": 4.5,
+			"gravel": 3,
+			"snow": 3
+		},
+		"shovel-iron-acacia": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.8,
+			"snow": 2.8
+		},
+		"shovel-iron-maple": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.8,
+			"snow": 2.8
+		},
+		"shovel-iron-purpleheart": {
+			"soil": 3.9,
+			"sand": 3.9,
+			"gravel": 2.6,
+			"snow": 2.6
+		},
+		"shovel-iron-ebony": {
+			"soil": 3.3,
+			"sand": 3.3,
+			"gravel": 2.2,
+			"snow": 2.2
+		},	
+		
+		"shovel-meteoriciron-aged": {
+			"soil": 7.15,
+			"sand": 7.15,
+			"gravel": 4.62,
+			"snow": 4.62
+		},
+		"shovel-meteoriciron-kapok": {
+			"soil": 6.825,
+			"sand": 6.825,
+			"gravel": 4.41,
+			"snow": 4.41
+		},
+		"shovel-meteoriciron-larch": {
+			"soil": 6.5,
+			"sand": 6.5,
+			"gravel": 4.2,
+			"snow": 4.2
+		},
+		"shovel-meteoriciron-redwood": {
+			"soil": 6.175,
+			"sand": 6.175,
+			"gravel": 3.99,
+			"snow": 3.99
+		},
+		"shovel-meteoriciron-baldcypress": {
+			"soil": 5.85,
+			"sand": 5.85,
+			"gravel": 3.78,
+			"snow": 3.78
+		},
+		"shovel-meteoriciron-oak": {
+			"soil": 5.85,
+			"sand": 5.85,
+			"gravel": 3.78,
+			"snow": 3.78
+		},
+		"shovel-meteoriciron-pine": {
+			"soil": 5.525,
+			"sand": 5.525,
+			"gravel": 3.57,
+			"snow": 3.57
+		},
+		"shovel-meteoriciron-birch": {
+			"soil": 5.2,
+			"sand": 5.2,
+			"gravel": 3.36,
+			"snow": 3.36
+		},
+		"shovel-meteoriciron-walnut": {
+			"soil": 4.875,
+			"sand": 4.875,
+			"gravel": 3.15,
+			"snow": 3.15
+		},
+		"shovel-meteoriciron-acacia": {
+			"soil": 4.55,
+			"sand": 4.55,
+			"gravel": 2.94,
+			"snow": 2.94
+		},
+		"shovel-meteoriciron-maple": {
+			"soil": 4.55,
+			"sand": 4.55,
+			"gravel": 2.94,
+			"snow": 2.94
+		},
+		"shovel-meteoriciron-purpleheart": {
+			"soil": 4.225,
+			"sand": 4.225,
+			"gravel": 2.73,
+			"snow": 2.73
+		},
+		"shovel-meteoriciron-ebony": {
+			"soil": 3.575,
+			"sand": 3.575,
+			"gravel": 2.31,
+			"snow": 2.31
+		},		
+
+		"shovel-steel-aged": {
+			"soil": 7.35,
+			"sand": 7.35,
+			"gravel": 4.62,
+			"snow": 4.62
+		},
+		"shovel-steel-kapok": {
+			"soil": 7,
+			"sand": 7,
+			"gravel": 4.4,
+			"snow": 4.4
+		},
+		"shovel-steel-larch": {
+			"soil": 6.65,
+			"sand": 6.65,
+			"gravel": 4.18,
+			"snow": 4.18
+		},
+		"shovel-steel-redwood": {
+			"soil": 6.3,
+			"sand": 6.3,
+			"gravel": 3.96,
+			"snow": 3.96
+		},
+		"shovel-steel-baldcypress": {
+			"soil": 5.95,
+			"sand": 5.95,
+			"gravel": 3.74,
+			"snow": 3.74
+		},
+		"shovel-steel-oak": {
+			"soil": 5.95,
+			"sand": 5.95,
+			"gravel": 3.74,
+			"snow": 3.74
+		},
+		"shovel-steel-pine": {
+			"soil": 5.6,
+			"sand": 5.6,
+			"gravel": 3.52,
+			"snow": 3.52
+		},
+		"shovel-steel-birch": {
+			"soil": 5.25,
+			"sand": 5.25,
+			"gravel": 3.3,
+			"snow": 3.3
+		},
+		"shovel-steel-walnut": {
+			"soil": 4.9,
+			"sand": 4.9,
+			"gravel": 3.08,
+			"snow": 3.08
+		},
+		"shovel-steel-acacia": {
+			"soil": 4.55,
+			"sand": 4.55,
+			"gravel": 2.86,
+			"snow": 2.86
+		},
+		"shovel-steel-maple": {
+			"soil": 4.55,
+			"sand": 4.55,
+			"gravel": 2.86,
+			"snow": 2.86
+		},
+		"shovel-steel-purpleheart": {
+			"soil": 4.2,
+			"sand": 4.2,
+			"gravel": 2.64,
+			"snow": 2.64
+		},
+		"shovel-steel-ebony": {
+			"soil": 3.5,
+			"sand": 3.5,
+			"gravel": 2.2,
+			"snow": 2.2
+		}
+	},
+	durabilitybytype: {
+		"shovel-silver-aged": 190,
+		"shovel-silver-kapok": 200,
+		"shovel-silver-baldcypress": 210,
+		"shovel-silver-redwood": 210,
+		"shovel-silver-larch": 210,
+		"shovel-silver-pine": 220,
+		"shovel-silver-oak": 220,
+		"shovel-silver-birch": 230,
+		"shovel-silver-walnut": 230,
+		"shovel-silver-maple": 240,
+		"shovel-silver-acacia": 250,
+		"shovel-silver-purpleheart": 260,
+		"shovel-silver-ebony": 280,
+
+		"shovel-gold-aged": 190,
+		"shovel-gold-kapok": 200,
+		"shovel-gold-baldcypress": 210,
+		"shovel-gold-redwood": 210,
+		"shovel-gold-larch": 210,
+		"shovel-gold-pine": 220,
+		"shovel-gold-oak": 220,
+		"shovel-gold-birch": 230,
+		"shovel-gold-walnut": 230,
+		"shovel-gold-maple": 240,
+		"shovel-gold-acacia": 250,
+		"shovel-gold-purpleheart": 260,
+		"shovel-gold-ebony": 280,
+
+		"shovel-copper-aged": 380,
+		"shovel-copper-kapok": 400,
+		"shovel-copper-baldcypress": 420,
+		"shovel-copper-redwood": 420,
+		"shovel-copper-larch": 420,
+		"shovel-copper-pine": 440,
+		"shovel-copper-oak": 440,
+		"shovel-copper-birch": 460,
+		"shovel-copper-walnut": 460,
+		"shovel-copper-maple": 480,
+		"shovel-copper-acacia": 500,
+		"shovel-copper-purpleheart": 520,
+		"shovel-copper-ebony": 560,
+
+		"shovel-tinbronze-aged": 540,
+		"shovel-tinbronze-kapok": 570,
+		"shovel-tinbronze-baldcypress": 600,
+		"shovel-tinbronze-redwood": 600,
+		"shovel-tinbronze-larch": 600,
+		"shovel-tinbronze-pine": 630,
+		"shovel-tinbronze-oak": 630,
+		"shovel-tinbronze-birch": 660,
+		"shovel-tinbronze-walnut": 660,
+		"shovel-tinbronze-maple": 690,
+		"shovel-tinbronze-acacia": 720,
+		"shovel-tinbronze-purpleheart": 750,
+		"shovel-tinbronze-ebony": 810,
+
+		"shovel-bismuthbronze-aged": 585,
+		"shovel-bismuthbronze-kapok": 618,
+		"shovel-bismuthbronze-baldcypress": 650,
+		"shovel-bismuthbronze-redwood": 650,
+		"shovel-bismuthbronze-larch": 650,
+		"shovel-bismuthbronze-pine": 682,
+		"shovel-bismuthbronze-oak": 682,
+		"shovel-bismuthbronze-birch": 715,
+		"shovel-bismuthbronze-walnut": 715,
+		"shovel-bismuthbronze-maple": 748,
+		"shovel-bismuthbronze-acacia": 780,
+		"shovel-bismuthbronze-purpleheart": 812,
+		"shovel-bismuthbronze-ebony": 878,
+
+		"shovel-blackbronze-aged": 630,
+		"shovel-blackbronze-kapok": 665,
+		"shovel-blackbronze-baldcypress": 700,
+		"shovel-blackbronze-redwood": 700,
+		"shovel-blackbronze-larch": 700,
+		"shovel-blackbronze-pine": 735,
+		"shovel-blackbronze-oak": 735,
+		"shovel-blackbronze-birch": 770,
+		"shovel-blackbronze-walnut": 770,
+		"shovel-blackbronze-maple": 805,
+		"shovel-blackbronze-acacia": 840,
+		"shovel-blackbronze-purpleheart": 875,
+		"shovel-blackbronze-ebony": 945,
+
+		"shovel-iron-aged": 1020,
+		"shovel-iron-kapok": 1080,
+		"shovel-iron-baldcypress": 1140,
+		"shovel-iron-redwood": 1140,
+		"shovel-iron-larch": 1140,
+		"shovel-iron-pine": 1200,
+		"shovel-iron-oak": 1200,
+		"shovel-iron-birch": 1260,
+		"shovel-iron-walnut": 1260,
+		"shovel-iron-maple": 1320,
+		"shovel-iron-acacia": 1380,
+		"shovel-iron-purpleheart": 1440,
+		"shovel-iron-ebony": 1560,
+
+		"shovel-meteoriciron-aged": 1190,
+		"shovel-meteoriciron-kapok": 1260,
+		"shovel-meteoriciron-baldcypress": 1330,
+		"shovel-meteoriciron-redwood": 1330,
+		"shovel-meteoriciron-larch": 1330,
+		"shovel-meteoriciron-pine": 1400,
+		"shovel-meteoriciron-oak": 1400,
+		"shovel-meteoriciron-birch": 1470,
+		"shovel-meteoriciron-walnut": 1470,
+		"shovel-meteoriciron-maple": 1540,
+		"shovel-meteoriciron-acacia": 1610,
+		"shovel-meteoriciron-purpleheart": 1680,
+		"shovel-meteoriciron-ebony": 1820,
+
+		"shovel-steel-aged": 2400,
+		"shovel-steel-kapok": 2550,
+		"shovel-steel-baldcypress": 2700,
+		"shovel-steel-redwood": 2700,
+		"shovel-steel-larch": 2700,
+		"shovel-steel-pine": 2850,
+		"shovel-steel-oak": 2850,
+		"shovel-steel-birch": 3000,
+		"shovel-steel-walnut": 3000,
+		"shovel-steel-maple": 3150,
+		"shovel-steel-acacia": 3300,
+		"shovel-steel-purpleheart": 3450,
+		"shovel-steel-ebony": 3750
+	},
+	attackpowerbytype: {
+		
+		"shovel-copper-larch": 1.125,
+		"shovel-copper-kapok": 1.125,
+		"shovel-copper-aged": 1.125,
+		"shovel-copper-redwood": 1.188,
+		"shovel-copper-oak": 1.25,
+		"shovel-copper-baldcypress": 1.25,
+		"shovel-copper-pine": 1.312,
+		"shovel-copper-birch": 1.375,
+		"shovel-copper-maple": 1.438,
+		"shovel-copper-walnut": 1.438,
+		"shovel-copper-purpleheart": 1.5,
+		"shovel-copper-acacia": 1.5,
+		"shovel-copper-ebony": 1.625,
+
+		"shovel-silver-larch": 1.35,
+		"shovel-silver-kapok": 1.35,
+		"shovel-silver-aged": 1.35,
+		"shovel-silver-redwood": 1.425,
+		"shovel-silver-oak": 1.5,
+		"shovel-silver-baldcypress": 1.5,
+		"shovel-silver-pine": 1.575,
+		"shovel-silver-birch": 1.65,
+		"shovel-silver-walnut": 1.725,
+		"shovel-silver-maple": 1.725,
+		"shovel-silver-purpleheart": 1.8,
+		"shovel-silver-acacia": 1.8,
+		"shovel-silver-ebony": 1.95,
+
+		"shovel-gold-larch": 1.35,
+		"shovel-gold-kapok": 1.35,
+		"shovel-gold-aged": 1.35,
+		"shovel-gold-redwood": 1.425,
+		"shovel-gold-oak": 1.5,
+		"shovel-gold-baldcypress": 1.5,
+		"shovel-gold-pine": 1.575,
+		"shovel-gold-birch": 1.65,
+		"shovel-gold-walnut": 1.725,
+		"shovel-gold-maple": 1.725,
+		"shovel-gold-purpleheart": 1.8,
+		"shovel-gold-acacia": 1.8,
+		"shovel-gold-ebony": 1.95,
+
+		"shovel-bismuthbronze-larch": 1.35,
+		"shovel-bismuthbronze-kapok": 1.35,
+		"shovel-bismuthbronze-aged": 1.35,
+		"shovel-bismuthbronze-redwood": 1.425,
+		"shovel-bismuthbronze-oak": 1.5,
+		"shovel-bismuthbronze-baldcypress": 1.5,
+		"shovel-bismuthbronze-pine": 1.575,
+		"shovel-bismuthbronze-birch": 1.65,
+		"shovel-bismuthbronze-walnut": 1.725,
+		"shovel-bismuthbronze-maple": 1.725,
+		"shovel-bismuthbronze-purpleheart": 1.8,
+		"shovel-bismuthbronze-acacia": 1.8,
+		"shovel-bismuthbronze-ebony": 1.95,
+
+		"shovel-tinbronze-larch": 1.575,
+		"shovel-tinbronze-kapok": 1.575,
+		"shovel-tinbronze-aged": 1.575,
+		"shovel-tinbronze-redwood": 1.662,
+		"shovel-tinbronze-oak": 1.75,
+		"shovel-tinbronze-baldcypress": 1.75,
+		"shovel-tinbronze-pine": 1.838,
+		"shovel-tinbronze-birch": 1.925,
+		"shovel-tinbronze-maple": 2.013,
+		"shovel-tinbronze-walnut": 2.013,
+		"shovel-tinbronze-purpleheart": 2.1,
+		"shovel-tinbronze-acacia": 2.1,
+		"shovel-tinbronze-ebony": 2.275,
+
+		"shovel-blackbronze-larch": 1.8,
+		"shovel-blackbronze-kapok": 1.8,
+		"shovel-blackbronze-aged": 1.8,
+		"shovel-blackbronze-redwood": 1.9,
+		"shovel-blackbronze-oak": 2,
+		"shovel-blackbronze-baldcypress": 2,
+		"shovel-blackbronze-pine": 2.1,
+		"shovel-blackbronze-birch": 2.2,
+		"shovel-blackbronze-maple": 2.3,
+		"shovel-blackbronze-walnut": 2.3,
+		"shovel-blackbronze-purpleheart": 2.4,
+		"shovel-blackbronze-acacia": 2.4,
+		"shovel-blackbronze-ebony": 2.6,
+
+		"shovel-iron-larch": 2.025,
+		"shovel-iron-kapok": 2.025,
+		"shovel-iron-aged": 2.025,
+		"shovel-iron-redwood": 2.138,
+		"shovel-iron-oak": 2.25,
+		"shovel-iron-baldcypress": 2.25,
+		"shovel-iron-pine": 2.362,
+		"shovel-iron-birch": 2.475,
+		"shovel-iron-maple": 2.588,
+		"shovel-iron-walnut": 2.588,
+		"shovel-iron-purpleheart": 2.7,
+		"shovel-iron-acacia": 2.7,
+		"shovel-iron-ebony": 2.925,
+
+		"shovel-meteoriciron-larch": 2.115,
+		"shovel-meteoriciron-kapok": 2.115,
+		"shovel-meteoriciron-aged": 2.115,
+		"shovel-meteoriciron-redwood": 2.232,
+		"shovel-meteoriciron-oak": 2.35,
+		"shovel-meteoriciron-baldcypress": 2.35,
+		"shovel-meteoriciron-pine": 2.468,
+		"shovel-meteoriciron-birch": 2.585,
+		"shovel-meteoriciron-maple": 2.702,
+		"shovel-meteoriciron-walnut": 2.702,
+		"shovel-meteoriciron-purpleheart": 2.82,
+		"shovel-meteoriciron-acacia": 2.82,
+		"shovel-meteoriciron-ebony": 3.055,
+
+		"shovel-steel-larch": 2.25,
+		"shovel-steel-kapok": 2.25,
+		"shovel-steel-aged": 2.25,
+		"shovel-steel-redwood": 2.375,
+		"shovel-steel-oak": 2.5,
+		"shovel-steel-baldcypress": 2.5,
+		"shovel-steel-pine": 2.625,
+		"shovel-steel-birch": 2.75,
+		"shovel-steel-maple": 2.875,
+		"shovel-steel-walnut": 2.875,
+		"shovel-steel-purpleheart": 3,
+		"shovel-steel-acacia": 3,
+		"shovel-steel-ebony": 3.25
+	},
+	creativeinventory: { "general": ["*"], "betterhandles": ["*"] },
+
+	fpHandTransform: {
+		translation: { x: 0.046875, y: -0.2, z: 0 },
+		rotation: { x: -15, y: 15, z: 100 },
+		scale: 2
+	},
+	guiTransformByType: {
+		"*":
+		{
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -113, y: -147, z: 139 },
+			origin: { x: 0.2, y: 0.7, z: 0.8 }
+		}
+	},
+	groundTransform: {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 3.6
+	},
+	tpHandTransform: {
+			translation: { x: -1.04, y: -0.24, z: -0.61 },
+			rotation: { x: 0, y: 0, z: -10 },
+			scale: 0.8
+	}
+}

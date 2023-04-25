@@ -1,0 +1,168 @@
+[
+	{
+		"ingredientPattern": "T,C,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["chert","peridotite","granite","andesite", "basalt", "flint", "obsidian"]},
+			"C": { "type": "item", "code": "game:cattailtops"},
+			"S": { "type": "item", "code": "game:stick" }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,C,B",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["chert","peridotite","granite","andesite", "basalt", "flint", "obsidian"]},
+			"C": { "type": "item", "code": "game:cattailtops"},
+			"B": { "type": "item", "code": "game:bone" }
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-bone-{material}", "quantity": 1  }
+	},
+
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-birch"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-birch", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-oak"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-oak", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-maple"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-maple", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-pine"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-pine", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-acacia"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-acacia", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-kapok"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-kapok", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-baldcypress"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-baldcypress", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-larch"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-larch", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-redwood"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-redwood", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-ebony"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-ebony", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-walnut"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-walnut", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-purpleheart"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-purpleheart", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "T,F,S",
+		"ingredients": {
+			"T": { "type": "item", "code": "game:hoehead-*", "name": "material", "allowedVariants": ["copper","tinbronze","bismuthbronze","blackbronze","gold","silver","iron","meteoriciron","steel"]},
+			"F": { "type": "item", "code": "game:flaxfibers"},
+			"S": { "type": "item", "code": "betterhandles:handle-aged"} 
+		},
+		"width": 1,
+		"height": 3,
+		"output": { "type": "item", "code": "betterhandles:hoe-{material}-aged", "quantity": 1  }
+	}
+]

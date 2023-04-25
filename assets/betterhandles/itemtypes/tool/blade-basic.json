@@ -1,0 +1,863 @@
+{
+	code: "blade",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	class: "ItemSword",
+	attributes: {
+		handbook: {
+			groupBy: ["blade-*"]
+		},
+		toolrackTransformByType: {
+			"*":
+				{
+					rotation: { y: 180, z: 1 },
+					translation: { x: -0.1, y: 0.6 },
+					scale: 1.25
+				}
+		},
+		groundStorageTransformByType: {
+			"blade-curved-*": {
+				translation: { x: -0.2, y: 0.08, z: 0.2 },
+				rotation: { x: 22, y: 180, z: -90 },
+				scale: 0.88
+			},
+			"blade-thrusting-*": {
+				translation: { x: 0, y: 0.3, z: -0.047 },
+				rotation: { x: 22, y: 88, z: -87 },
+				scale: 0.88
+			},
+			"blade-falx-*": {
+				translation: { x: 0.07, y: 0.055, z: 0 },
+				rotation: { x: 26, y: 61, z: -87 },
+				scale: 0.88
+			},
+			"*": {
+				translation: { x: 0, y: 0.06, z: -0.025 },
+				rotation: { x: 26, y: 90, z: -90 },
+				scale: 0.88
+			}
+		},
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			PlaceRemoveSound: "game:sounds/tool/slash",
+			wallOffYByType: {
+				"blade-thrusting-*": 2,
+				"*": 1
+			},
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		}
+	}],
+	variantgroups: [
+		{ code: "type", states: ["falx", "short", "long", "thrusting", "curved" ] },
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel"] },
+		{ code: "handle", states: ["birch", "oak", "maple", "pine","acacia","kapok","baldcypress","larch",
+		"redwood", "ebony", "walnut", "purpleheart", "aged" ]}
+	],
+	allowedVariants: [
+		"blade-falx-*"
+	],
+	shapeByType: {
+		"*": { base: "game:item/tool/blade/{metal}" }
+	},
+	heldTpHitAnimationByType: {
+		"*": "falx"
+	},
+	texturesByType: {
+		"@*-falx-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)-(birch|oak|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart|aged)":{
+			"handle": {"base": "betterhandles:block/{handle}"}
+		}
+
+	},
+	attackRange: 2.5,
+	tooltierbytype: {
+		"*-copper-*": 2,
+		"*-gold-*": 3,
+		"*-silver-*": 3,
+		"*-bismuthbronze-*": 3,
+		"*-tinbronze-*": 3,
+		"*-blackbronze-*": 3,
+		"*-iron-*": 4,
+		"*-meteoriciron-*": 4,
+		"*-steel-*": 5
+	},
+	miningspeedbytype: {
+		"blade-falx-copper-aged": {
+			"wood": 2.64,
+			"leaves": 1.92
+		},
+		"blade-falx-copper-kapok": {
+			"wood": 2.53,
+			"leaves": 1.84
+		},
+		"blade-falx-copper-larch": {
+			"wood": 2.42,
+			"leaves": 1.76
+		},
+		"blade-falx-copper-redwood": {
+			"wood": 2.31,
+			"leaves": 1.68
+		},
+		"blade-falx-copper-baldcypress": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-copper-oak": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-copper-pine": {
+			"wood": 2.09,
+			"leaves": 1.52
+		},
+		"blade-falx-copper-birch": {
+			"wood": 1.98,
+			"leaves": 1.44
+		},
+		"blade-falx-copper-walnut": {
+			"wood": 1.87,
+			"leaves": 1.36
+		},
+		"blade-falx-copper-maple": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-copper-acacia": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-copper-purpleheart": {
+			"wood": 1.65,
+			"leaves": 1.2
+		},
+		"blade-falx-copper-ebony": {
+			"wood": 1.43,
+			"leaves": 1.04
+		},
+
+		"blade-falx-silver-aged": {
+			"wood": 2.64,
+			"leaves": 1.92
+		},
+		"blade-falx-silver-kapok": {
+			"wood": 2.53,
+			"leaves": 1.84
+		},
+		"blade-falx-silver-larch": {
+			"wood": 2.42,
+			"leaves": 1.76
+		},
+		"blade-falx-silver-redwood": {
+			"wood": 2.31,
+			"leaves": 1.68
+		},
+		"blade-falx-silver-baldcypress": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-silver-oak": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-silver-pine": {
+			"wood": 2.09,
+			"leaves": 1.52
+		},
+		"blade-falx-silver-birch": {
+			"wood": 1.98,
+			"leaves": 1.44
+		},
+		"blade-falx-silver-walnut": {
+			"wood": 1.87,
+			"leaves": 1.36
+		},
+		"blade-falx-silver-maple": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-silver-acacia": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-silver-purpleheart": {
+			"wood": 1.65,
+			"leaves": 1.2
+		},
+		"blade-falx-silver-ebony": {
+			"wood": 1.43,
+			"leaves": 1.04
+		},
+
+		"blade-falx-gold-aged": {
+			"wood": 2.64,
+			"leaves": 1.92
+		},
+		"blade-falx-gold-kapok": {
+			"wood": 2.53,
+			"leaves": 1.84
+		},
+		"blade-falx-gold-larch": {
+			"wood": 2.42,
+			"leaves": 1.76
+		},
+		"blade-falx-gold-redwood": {
+			"wood": 2.31,
+			"leaves": 1.68
+		},
+		"blade-falx-gold-baldcypress": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-gold-oak": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"blade-falx-gold-pine": {
+			"wood": 2.09,
+			"leaves": 1.52
+		},
+		"blade-falx-gold-birch": {
+			"wood": 1.98,
+			"leaves": 1.44
+		},
+		"blade-falx-gold-walnut": {
+			"wood": 1.87,
+			"leaves": 1.36
+		},
+		"blade-falx-gold-maple": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-gold-acacia": {
+			"wood": 1.76,
+			"leaves": 1.28
+		},
+		"blade-falx-gold-purpleheart": {
+			"wood": 1.65,
+			"leaves": 1.2
+		},
+		"blade-falx-gold-ebony": {
+			"wood": 1.43,
+			"leaves": 1.04
+		},
+
+		"blade-falx-bismuthbronze-aged": {
+			"wood": 2.645,
+			"leaves": 2.3
+		},
+		"blade-falx-bismuthbronze-kapok": {
+			"wood": 2.53,
+			"leaves": 2.2
+		},
+		"blade-falx-bismuthbronze-larch": {
+			"wood": 2.415,
+			"leaves": 2.1
+		},
+		"blade-falx-bismuthbronze-redwood": {
+			"wood": 2.3,
+			"leaves": 2
+		},
+		"blade-falx-bismuthbronze-baldcypress": {
+			"wood": 2.185,
+			"leaves": 1.9
+		},
+		"blade-falx-bismuthbronze-oak": {
+			"wood": 2.185,
+			"leaves": 1.9
+		},
+		"blade-falx-bismuthbronze-pine": {
+			"wood": 2.07,
+			"leaves": 1.8
+		},
+		"blade-falx-bismuthbronze-birch": {
+			"wood": 1.955,
+			"leaves": 1.7
+		},
+		"blade-falx-bismuthbronze-walnut": {
+			"wood": 1.84,
+			"leaves": 1.6
+		},
+		"blade-falx-bismuthbronze-maple": {
+			"wood": 1.725,
+			"leaves": 1.5
+		},
+		"blade-falx-bismuthbronze-acacia": {
+			"wood": 1.725,
+			"leaves": 1.5
+		},
+		"blade-falx-bismuthbronze-purpleheart": {
+			"wood": 1.61,
+			"leaves": 1.4
+		},
+		"blade-falx-bismuthbronze-ebony": {
+			"wood": 1.38,
+			"leaves": 1.2
+		},
+
+		"blade-falx-tinbronze-aged": {
+			"wood": 2.76,
+			"leaves": 2.53
+		},
+		"blade-falx-tinbronze-kapok": {
+			"wood": 2.64,
+			"leaves": 2.42
+		},
+		"blade-falx-tinbronze-larch": {
+			"wood": 2.52,
+			"leaves": 2.31
+		},
+		"blade-falx-tinbronze-redwood": {
+			"wood": 2.4,
+			"leaves": 2.2
+		},
+		"blade-falx-tinbronze-baldcypress": {
+			"wood": 2.28,
+			"leaves": 2.09
+		},
+		"blade-falx-tinbronze-oak": {
+			"wood": 2.28,
+			"leaves": 2.09
+		},
+		"blade-falx-tinbronze-pine": {
+			"wood": 2.16,
+			"leaves": 1.98
+		},
+		"blade-falx-tinbronze-birch": {
+			"wood": 2.04,
+			"leaves": 1.87
+		},
+		"blade-falx-tinbronze-walnut": {
+			"wood": 1.92,
+			"leaves": 1.76
+		},
+		"blade-falx-tinbronze-maple": {
+			"wood": 1.8,
+			"leaves": 1.65
+		},
+		"blade-falx-tinbronze-acacia": {
+			"wood": 1.8,
+			"leaves": 1.65
+		},
+		"blade-falx-tinbronze-purpleheart": {
+			"wood": 1.68,
+			"leaves": 1.54
+		},
+		"blade-falx-tinbronze-ebony": {
+			"wood": 1.44,
+			"leaves": 1.32
+		},
+
+		"blade-falx-blackbronze-aged": {
+			"wood": 2.875,
+			"leaves": 2.645
+		},
+		"blade-falx-blackbronze-kapok": {
+			"wood": 2.75,
+			"leaves": 2.53
+		},
+		"blade-falx-blackbronze-larch": {
+			"wood": 2.625,
+			"leaves": 2.415
+		},
+		"blade-falx-blackbronze-redwood": {
+			"wood": 2.5,
+			"leaves": 2.3
+		},
+		"blade-falx-blackbronze-baldcypress": {
+			"wood": 2.375,
+			"leaves": 2.185
+		},
+		"blade-falx-blackbronze-oak": {
+			"wood": 2.375,
+			"leaves": 2.185
+		},
+		"blade-falx-blackbronze-pine": {
+			"wood": 2.25,
+			"leaves": 2.07
+		},
+		"blade-falx-blackbronze-birch": {
+			"wood": 2.125,
+			"leaves": 1.955
+		},
+		"blade-falx-blackbronze-walnut": {
+			"wood": 2,
+			"leaves": 1.84
+		},
+		"blade-falx-blackbronze-maple": {
+			"wood": 1.875,
+			"leaves": 1.725
+		},
+		"blade-falx-blackbronze-acacia": {
+			"wood": 1.875,
+			"leaves": 1.725
+		},
+		"blade-falx-blackbronze-purpleheart": {
+			"wood": 1.75,
+			"leaves": 1.61
+		},
+		"blade-falx-blackbronze-ebony": {
+			"wood": 1.5,
+			"leaves": 1.38
+		},
+
+		"blade-falx-iron-aged": {
+			"wood": 3.3,
+			"leaves": 3.3
+		},
+		"blade-falx-iron-kapok": {
+			"wood": 3.15,
+			"leaves": 3.15
+		},
+		"blade-falx-iron-larch": {
+			"wood": 3,
+			"leaves": 3
+		},
+		"blade-falx-iron-redwood": {
+			"wood": 2.85,
+			"leaves": 2.85
+		},
+		"blade-falx-iron-baldcypress": {
+			"wood": 2.7,
+			"leaves": 2.7
+		},
+		"blade-falx-iron-oak": {
+			"wood": 2.7,
+			"leaves": 2.7
+		},
+		"blade-falx-iron-pine": {
+			"wood": 2.55,
+			"leaves": 2.55
+		},
+		"blade-falx-iron-birch": {
+			"wood": 2.4,
+			"leaves": 2.4
+		},
+		"blade-falx-iron-walnut": {
+			"wood": 2.25,
+			"leaves": 2.25
+		},
+		"blade-falx-iron-maple": {
+			"wood": 2.1,
+			"leaves": 2.1
+		},
+		"blade-falx-iron-acacia": {
+			"wood": 2.1,
+			"leaves": 2.1
+		},
+		"blade-falx-iron-purpleheart": {
+			"wood": 1.95,
+			"leaves": 1.95
+		},
+		"blade-falx-iron-ebony": {
+			"wood": 1.65,
+			"leaves": 1.65
+		},
+
+		"blade-falx-meteoriciron-aged": {
+			"wood": 3.575,
+			"leaves": 3.85
+		},
+		"blade-falx-meteoriciron-kapok": {
+			"wood": 3.412,
+			"leaves": 3.675
+		},
+		"blade-falx-meteoriciron-larch": {
+			"wood": 3.25,
+			"leaves": 3.5
+		},
+		"blade-falx-meteoriciron-redwood": {
+			"wood": 3.088,
+			"leaves": 3.325
+		},
+		"blade-falx-meteoriciron-baldcypress": {
+			"wood": 2.925,
+			"leaves": 3.15
+		},
+		"blade-falx-meteoriciron-oak": {
+			"wood": 2.925,
+			"leaves": 3.15
+		},
+		"blade-falx-meteoriciron-pine": {
+			"wood": 2.762,
+			"leaves": 2.975
+		},
+		"blade-falx-meteoriciron-birch": {
+			"wood": 2.6,
+			"leaves": 2.8
+		},
+		"blade-falx-meteoriciron-walnut": {
+			"wood": 2.438,
+			"leaves": 2.625
+		},
+		"blade-falx-meteoriciron-maple": {
+			"wood": 2.275,
+			"leaves": 2.45
+		},
+		"blade-falx-meteoriciron-acacia": {
+			"wood": 2.275,
+			"leaves": 2.45
+		},
+		"blade-falx-meteoriciron-purpleheart": {
+			"wood": 2.112,
+			"leaves": 2.275
+		},
+		"blade-falx-meteoriciron-ebony": {
+			"wood": 1.788,
+			"leaves": 1.925
+		},
+
+		"blade-falx-steel-aged": {
+			"wood": 3.675,
+			"leaves": 4.2
+		},
+		"blade-falx-steel-kapok": {
+			"wood": 3.5,
+			"leaves": 4
+		},
+		"blade-falx-steel-larch": {
+			"wood": 3.325,
+			"leaves": 3.8
+		},
+		"blade-falx-steel-redwood": {
+			"wood": 3.15,
+			"leaves": 3.6
+		},
+		"blade-falx-steel-baldcypress": {
+			"wood": 2.975,
+			"leaves": 3.4
+		},
+		"blade-falx-steel-oak": {
+			"wood": 2.975,
+			"leaves": 3.4
+		},
+		"blade-falx-steel-pine": {
+			"wood": 2.8,
+			"leaves": 3.2
+		},
+		"blade-falx-steel-birch": {
+			"wood": 2.625,
+			"leaves": 3
+		},
+		"blade-falx-steel-walnut": {
+			"wood": 2.45,
+			"leaves": 2.8
+		},
+		"blade-falx-steel-maple": {
+			"wood": 2.275,
+			"leaves": 2.6
+		},
+		"blade-falx-steel-acacia": {
+			"wood": 2.275,
+			"leaves": 2.6
+		},
+		"blade-falx-steel-purpleheart": {
+			"wood": 2.1,
+			"leaves": 2.4
+		},
+		"blade-falx-steel-ebony": {
+			"wood": 1.75,
+			"leaves": 1.75
+		},
+
+		"blade-falx-steel-*": {
+			"wood": 3.5,
+			"leaves": 4
+		}
+	},
+	attackpowerbytype: {
+		"blade-falx-copper-larch": 3.375,
+		"blade-falx-copper-kapok": 3.375,
+		"blade-falx-copper-aged": 3.375,
+		"blade-falx-copper-redwood": 3.562,
+		"blade-falx-copper-oak": 3.75,
+		"blade-falx-copper-baldcypress": 3.75,
+		"blade-falx-copper-pine": 3.938,
+		"blade-falx-copper-birch": 4.125,
+		"blade-falx-copper-maple": 4.312,
+		"blade-falx-copper-walnut": 4.312,
+		"blade-falx-copper-purpleheart": 4.5,
+		"blade-falx-copper-acacia": 4.5,
+		"blade-falx-copper-ebony": 4.875,
+
+		"blade-falx-silver-larch": 3.6,
+		"blade-falx-silver-kapok": 3.6,
+		"blade-falx-silver-aged": 3.6,
+		"blade-falx-silver-redwood": 3.8,
+		"blade-falx-silver-oak": 4,
+		"blade-falx-silver-baldcypress": 4,
+		"blade-falx-silver-pine": 4.2,
+		"blade-falx-silver-birch": 4.4,
+		"blade-falx-silver-maple": 4.6,
+		"blade-falx-silver-walnut": 4.6,
+		"blade-falx-silver-purpleheart": 4.8,
+		"blade-falx-silver-acacia": 4.8,
+		"blade-falx-silver-ebony": 5.2,
+
+		"blade-falx-gold-larch": 3.6,
+		"blade-falx-gold-kapok": 3.6,
+		"blade-falx-gold-aged": 3.6,
+		"blade-falx-gold-redwood": 3.8,
+		"blade-falx-gold-oak": 4,
+		"blade-falx-gold-baldcypress": 4,
+		"blade-falx-gold-pine": 4.2,
+		"blade-falx-gold-birch": 4.4,
+		"blade-falx-gold-maple": 4.6,
+		"blade-falx-gold-walnut": 4.6,
+		"blade-falx-gold-purpleheart": 4.8,
+		"blade-falx-gold-acacia": 4.8,
+		"blade-falx-gold-ebony": 5.2,
+
+		"blade-falx-bismuthbronze-larch": 3.6,
+		"blade-falx-bismuthbronze-kapok": 3.6,
+		"blade-falx-bismuthbronze-aged": 3.6,
+		"blade-falx-bismuthbronze-redwood": 3.8,
+		"blade-falx-bismuthbronze-oak": 4,
+		"blade-falx-bismuthbronze-baldcypress": 4,
+		"blade-falx-bismuthbronze-pine": 4.2,
+		"blade-falx-bismuthbronze-birch": 4.4,
+		"blade-falx-bismuthbronze-maple": 4.6,
+		"blade-falx-bismuthbronze-walnut": 4.6,
+		"blade-falx-bismuthbronze-purpleheart": 4.8,
+		"blade-falx-bismuthbronze-acacia": 4.8,
+		"blade-falx-bismuthbronze-ebony": 5.2,
+
+		"blade-falx-tinbronze-larch": 3.825,
+		"blade-falx-tinbronze-kapok": 3.825,
+		"blade-falx-tinbronze-aged": 3.825,
+		"blade-falx-tinbronze-redwood": 4.037,
+		"blade-falx-tinbronze-oak": 4.25,
+		"blade-falx-tinbronze-baldcypress": 4.25,
+		"blade-falx-tinbronze-pine": 4.462,
+		"blade-falx-tinbronze-birch": 4.675,
+		"blade-falx-tinbronze-maple": 4.888,
+		"blade-falx-tinbronze-walnut": 4.888,
+		"blade-falx-tinbronze-purpleheart": 5.1,
+		"blade-falx-tinbronze-acacia": 5.1,
+		"blade-falx-tinbronze-ebony": 5.525,
+		
+		"blade-falx-blackbronze-larch": 4.05,
+		"blade-falx-blackbronze-kapok": 4.05,
+		"blade-falx-blackbronze-aged": 4.05,
+		"blade-falx-blackbronze-redwood": 4.275,
+		"blade-falx-blackbronze-oak": 4.5,
+		"blade-falx-blackbronze-baldcypress": 4.5,
+		"blade-falx-blackbronze-pine": 4.725,
+		"blade-falx-blackbronze-birch": 4.95,
+		"blade-falx-blackbronze-maple": 5.175,
+		"blade-falx-blackbronze-walnut": 5.175,
+		"blade-falx-blackbronze-purpleheart": 5.4,
+		"blade-falx-blackbronze-acacia": 5.4,
+		"blade-falx-blackbronze-ebony": 5.85,
+
+		"blade-falx-iron-larch": 4.275,
+		"blade-falx-iron-kapok": 4.275,
+		"blade-falx-iron-aged": 4.275,
+		"blade-falx-iron-redwood": 4.512,
+		"blade-falx-iron-oak": 4.75,
+		"blade-falx-iron-baldcypress": 4.75,
+		"blade-falx-iron-pine": 4.988,
+		"blade-falx-iron-birch": 5.225,
+		"blade-falx-iron-maple": 5.462,
+		"blade-falx-iron-walnut": 5.462,
+		"blade-falx-iron-purpleheart": 5.7,
+		"blade-falx-iron-acacia": 5.7,
+		"blade-falx-iron-ebony": 6.175,
+
+		"blade-falx-meteoriciron-larch": 4.5,
+		"blade-falx-meteoriciron-kapok": 4.5,
+		"blade-falx-meteoriciron-aged": 4.5,
+		"blade-falx-meteoriciron-redwood": 4.75,
+		"blade-falx-meteoriciron-oak": 5,
+		"blade-falx-meteoriciron-baldcypress": 5,
+		"blade-falx-meteoriciron-pine": 5.25,
+		"blade-falx-meteoriciron-birch": 5.5,
+		"blade-falx-meteoriciron-maple": 5.75,
+		"blade-falx-meteoriciron-walnut": 5.75,
+		"blade-falx-meteoriciron-purpleheart": 6,
+		"blade-falx-meteoriciron-acacia": 6,
+		"blade-falx-meteoriciron-ebony": 6.5,
+
+		"blade-falx-steel-larch": 4.725,
+		"blade-falx-steel-kapok": 4.725,
+		"blade-falx-steel-aged": 4.725,
+		"blade-falx-steel-redwood": 4.988,
+		"blade-falx-steel-oak": 5.25,
+		"blade-falx-steel-baldcypress": 5.25,
+		"blade-falx-steel-pine": 5.512,
+		"blade-falx-steel-birch": 5.775,
+		"blade-falx-steel-maple": 6.038,
+		"blade-falx-steel-walnut": 6.038,
+		"blade-falx-steel-purpleheart": 6.3,
+		"blade-falx-steel-acacia": 6.3,
+		"blade-falx-steel-ebony": 6.825
+	},
+	durabilitybytype: {
+		"blade-falx-copper-aged": 238,
+		"blade-falx-copper-kapok": 250,
+		"blade-falx-copper-baldcypress": 262,
+		"blade-falx-copper-redwood": 262,
+		"blade-falx-copper-larch": 262,
+		"blade-falx-copper-pine": 275,
+		"blade-falx-copper-oak": 275,
+		"blade-falx-copper-walnut": 288,
+		"blade-falx-copper-birch": 288,
+		"blade-falx-copper-maple": 300,
+		"blade-falx-copper-acacia": 312,
+		"blade-falx-copper-purpleheart": 325,
+		"blade-falx-copper-ebony": 350,
+
+		"blade-falx-silver-aged": 238,
+		"blade-falx-silver-kapok": 250,
+		"blade-falx-silver-baldcypress": 262,
+		"blade-falx-silver-redwood": 262,
+		"blade-falx-silver-larch": 262,
+		"blade-falx-silver-pine": 275,
+		"blade-falx-silver-oak": 275,
+		"blade-falx-silver-walnut": 288,
+		"blade-falx-silver-birch": 288,
+		"blade-falx-silver-maple": 300,
+		"blade-falx-silver-acacia": 312,
+		"blade-falx-silver-purpleheart": 325,
+		"blade-falx-silver-ebony": 350,
+
+		"blade-falx-gold-aged": 238,
+		"blade-falx-gold-kapok": 250,
+		"blade-falx-gold-baldcypress": 262,
+		"blade-falx-gold-redwood": 262,
+		"blade-falx-gold-larch": 262,
+		"blade-falx-gold-pine": 275,
+		"blade-falx-gold-oak": 275,
+		"blade-falx-gold-walnut": 288,
+		"blade-falx-gold-birch": 288,
+		"blade-falx-gold-maple": 300,
+		"blade-falx-gold-acacia": 312,
+		"blade-falx-gold-purpleheart": 325,
+		"blade-falx-gold-ebony": 350,
+
+		"blade-falx-tinbronze-aged": 405,
+		"blade-falx-tinbronze-kapok": 428,
+		"blade-falx-tinbronze-baldcypress": 450,
+		"blade-falx-tinbronze-redwood": 450,
+		"blade-falx-tinbronze-larch": 450,
+		"blade-falx-tinbronze-pine": 472,
+		"blade-falx-tinbronze-oak": 472,
+		"blade-falx-tinbronze-walnut": 495,
+		"blade-falx-tinbronze-birch": 495,
+		"blade-falx-tinbronze-maple": 518,
+		"blade-falx-tinbronze-acacia": 540,
+		"blade-falx-tinbronze-purpleheart": 562,
+		"blade-falx-tinbronze-ebony": 608,
+
+		"blade-falx-bismuthbronze-aged": 477,
+		"blade-falx-bismuthbronze-kapok": 504,
+		"blade-falx-bismuthbronze-baldcypress": 530,
+		"blade-falx-bismuthbronze-redwood": 530,
+		"blade-falx-bismuthbronze-larch": 530,
+		"blade-falx-bismuthbronze-pine": 556,
+		"blade-falx-bismuthbronze-oak": 556,
+		"blade-falx-bismuthbronze-walnut": 583,
+		"blade-falx-bismuthbronze-birch": 583,
+		"blade-falx-bismuthbronze-maple": 610,
+		"blade-falx-bismuthbronze-acacia": 636,
+		"blade-falx-bismuthbronze-purpleheart": 662,
+		"blade-falx-bismuthbronze-ebony": 716,
+
+		"blade-falx-blackbronze-aged": 540,
+		"blade-falx-blackbronze-kapok": 570,
+		"blade-falx-blackbronze-baldcypress": 600,
+		"blade-falx-blackbronze-redwood": 600,
+		"blade-falx-blackbronze-larch": 600,
+		"blade-falx-blackbronze-pine": 630,
+		"blade-falx-blackbronze-oak": 630,
+		"blade-falx-blackbronze-walnut": 660,
+		"blade-falx-blackbronze-birch": 660,
+		"blade-falx-blackbronze-maple": 690,
+		"blade-falx-blackbronze-acacia": 720,
+		"blade-falx-blackbronze-purpleheart": 750,
+		"blade-falx-blackbronze-ebony": 810,
+
+		"blade-falx-iron-aged": 722,
+		"blade-falx-iron-kapok": 765,
+		"blade-falx-iron-baldcypress": 808,
+		"blade-falx-iron-redwood": 808,
+		"blade-falx-iron-larch": 808,
+		"blade-falx-iron-pine": 850,
+		"blade-falx-iron-oak": 850,
+		"blade-falx-iron-walnut": 892,
+		"blade-falx-iron-birch": 892,
+		"blade-falx-iron-maple": 935,
+		"blade-falx-iron-acacia": 978,
+		"blade-falx-iron-purpleheart": 1020,
+		"blade-falx-iron-ebony": 1105,
+
+		"blade-falx-meteoriciron-aged": 935,
+		"blade-falx-meteoriciron-kapok": 935,
+		"blade-falx-meteoriciron-baldcypress": 1045,
+		"blade-falx-meteoriciron-redwood": 1045,
+		"blade-falx-meteoriciron-larch": 1045,
+		"blade-falx-meteoriciron-pine": 1100,
+		"blade-falx-meteoriciron-oak": 1100,
+		"blade-falx-meteoriciron-walnut": 1155,
+		"blade-falx-meteoriciron-birch": 1155,
+		"blade-falx-meteoriciron-maple": 1210,
+		"blade-falx-meteoriciron-acacia": 1265,
+		"blade-falx-meteoriciron-purpleheart": 1320,
+		"blade-falx-meteoriciron-ebony": 1430,
+
+		"blade-falx-steel-aged": 1280,
+		"blade-falx-steel-kapok": 1360,
+		"blade-falx-steel-baldcypress": 1440,
+		"blade-falx-steel-redwood": 1440,
+		"blade-falx-steel-larch": 1440,
+		"blade-falx-steel-pine": 1520,
+		"blade-falx-steel-oak": 1520,
+		"blade-falx-steel-walnut": 1600,
+		"blade-falx-steel-birch": 1600,
+		"blade-falx-steel-maple": 1680,
+		"blade-falx-steel-acacia": 1760,
+		"blade-falx-steel-purpleheart": 1840,
+		"blade-falx-steel-ebony": 2000
+	},
+	creativeinventoryByType: {
+		"*": { "general": ["*"], "betterhandles": ["*"] }
+	},
+	guiTransformByType: {
+		"*":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: -53, y: 118, z: -5 },
+				origin: { x: 0.65, y: 0.1, z: 0.37 },
+				scale: 1.65
+			}
+	},
+	fpHandTransformByType: {
+		"*":
+			{
+				translation: { x: -0.2, y: -0.2, z: 0 },
+				rotation: { x: -3, y: 15, z: 90 },
+				scale: 3.18
+			}
+	},
+	groundTransformByType: {
+		"*":
+			{
+				translation: { x: 0, y: 0, z: 0 },
+				rotation: { x: 0, y: 0, z: 0 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 3.4
+			}
+	},
+	tpHandTransformByType: {
+		"*":
+			{
+				translation: { x: -1.03, y: -0.005, z: -0.66 },
+				rotation: { x: 85, y: 0, z: 2 },
+				origin: { x: 0.5, y: 0, z: 0.5 },
+				scale: 0.8
+			}
+	}
+}

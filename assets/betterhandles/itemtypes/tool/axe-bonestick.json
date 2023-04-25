@@ -1,0 +1,171 @@
+{
+	code: "axe",
+	class: "ItemAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.3, y: 0.6 },
+			scale: 1.25
+		},
+		groundStorageTransform: {
+			translation: { x: 0, y: 0.04, z: -0.035 },
+			rotation: { x: 22, y: 88, z: -87 },
+			scale: 0.88
+		}
+	},
+	behaviors: [{ 
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 1,
+			PlaceRemoveSound: "game:sounds/block/hewnfancegate",
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		}
+	}],
+	variantgroups: [
+		{ code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", 
+																 "bone-chert", "bone-granite", "bone-andesite", "bone-basalt", "bone-obsidian", "bone-peridotite", 
+																 "bone-flint" 
+
+		  ] }
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "game:item/tool/axe-stone" },
+	heldTpHitAnimation: "axechop",
+	texturesByType: {
+		"axe-flint": { 
+			"material": { "base": "game:block/stone/{material}" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-chert": {
+			"material": { "base": "game:block/stone/rock/chert1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-granite": {
+			"material": { "base": "game:block/stone/rock/granite1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-andesite": {
+			"material": { "base": "game:block/stone/rock/andesite1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-basalt": {
+			"material": { "base": "game:block/stone/rock/basalt1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-obsidian": {
+			"material": { "base": "game:block/stone/rock/obsidian1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-peridotite": {
+			"material": { "base": "game:block/stone/rock/peridotite1" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*-bone-flint": {
+			"material": { "base": "game:block/stone/flint" },
+			"handle": { "base": "game:block/bone-yellow" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		},
+		"*": { 
+			"material": { "base": "game:block/stone/rock/{material}1" },
+            "string": { "base": "betterhandles:item/resource/reedfibers" }
+		}
+	},
+	attackRange: 2,
+	tooltierbytype: {
+		"*": 1
+	},
+	miningspeedbytype: {
+		"axe-flint": {
+			"wood": 3.12,
+			"plant": 1.68,
+			"leaves": 1.44
+		},
+		"axe-bone-flint": {
+			"wood": 2.651,
+			"plant": 1.428,
+			"leaves": 1.224
+		},
+		"axe-obsidian": {
+			"wood": 3.64,
+			"plant": 1.96,
+			"leaves": 1.68
+		},
+		"axe-bone-obsidian": {
+			"wood": 3.094,
+			"plant": 1.666,
+			"leaves": 1.428
+		},
+        "@axe-bone-(chert|andesite|granite|basalt|peridotite)": {
+			"wood": 2.21,
+			"plant": 1.19,
+			"leaves": 1.02
+		},
+		"*": {
+			"wood": 2.6,
+			"plant": 1.4,
+			"leaves": 1.2
+		}
+	},
+	durabilitybytype: {
+		"axe-obsidian": 75,
+		"axe-flint": 60,
+		"axe-bone-flint": 84,
+		"axe-bone-obsidian": 105,
+		"axe-bone-chert": 63,
+		"axe-bone-andesite": 63,
+		"axe-bone-granite": 63,
+		"axe-bone-basalt": 63,
+		"axe-bone-peridotite": 63,
+		"*": 45
+	},
+	attackpowerbytype: {
+		"axe-obsidian": 1.2,
+		"axe-flint": 1,
+		"axe-bone-obsidian": 1.56,
+		"axe-bone-flint": 1.3,
+		"axe-bone-chert": 1.04,
+		"axe-bone-andesite": 1.04,
+		"axe-bone-granite": 1.04,
+		"axe-bone-basalt": 1.04,
+		"axe-bone-peridotite": 1.04,
+		"*": 0.8
+	},
+	creativeinventory: { "general": ["*"], "betterhandles": ["*"] },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -89, y: 41, z: 33 },
+		origin: { x: 0.48, y: 0, z: 0.38 },
+		scale: 1.78
+	},
+	fpHandTransform: {
+		translation: { x: -0.3, y: -0.5, z: 0.3 },
+		rotation: { x: -29, y: 1, z: 88 },
+		origin: { x: 0.2, y: 0.5, z: 0.5 },
+		scale: 2.5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0.01, z: -0.65 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}
